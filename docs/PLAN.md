@@ -80,7 +80,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   §4.1 y §7.
   *Hecho cuando:* `dorados/reja_1200x1000.json` coincide (modelo completo con posiciones, y medición); hay un caso por cada error y por la advertencia `sin_barrotes`.
 
-- [ ] **F1-T9 · Plantilla `porton_abatible`** · I +R
+- [x] **F1-T9 · Plantilla `porton_abatible`** · I +R
   §4.2, los tres rellenos.
   *Hecho cuando:* coinciden `porton_3000x2200`, `porton_1hoja_barrotes_1000x2100` y `porton_lamina_2400x2000`; errores y advertencia `hoja_ancha` cubiertos.
 

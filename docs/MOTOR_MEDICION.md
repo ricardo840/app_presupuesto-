@@ -189,7 +189,7 @@ Advertencia `sin_barrotes` si `n = 0`.
 | `barrote` | artículo | — | requerido en `mixto` y `barrotes` | |
 | `separacion_max` | longitud | 110 | 30–300 | requerido en `mixto` y `barrotes` |
 | `lamina` | artículo | — | requerido en `mixto` y `lamina` | |
-| `alto_zoclo` | longitud | 900 | requerido en `mixto` | altura de la lámina inferior |
+| `alto_zoclo` | longitud | 900 | 100–3000; requerido en `mixto` | altura de la lámina inferior |
 | `travesano` | artículo | — | requerido en `mixto` y `lamina` | |
 | `paso_punteo` | longitud | 150 | 50–500 | distancia entre puntos de soldadura de la lámina |
 | `bisagra` | artículo | — | herraje | |
@@ -212,6 +212,8 @@ Reglas, con `c = cara(bastidor)`:
 9. Herrajes: bisagras `2` por hoja si `alto_hoja ≤ 2000`, `3` si es mayor. Un `pasador` si se indicó. Un `picaporte` si se indicó y hay 2 hojas.
 10. Uniones: `bastidor: 4` por hoja; `travesanos: 2` por travesaño; `barrotes: 2` por barrote; `lamina`: los puntos; `bisagras: 2` por bisagra; `pasador: 2`; `picaporte: 2`.
 11. Extras: `barrotes` (total), `bisagras`. `num_hojas = hojas`. `caja = ancho × alto` del vano.
+
+Error `claro_insuficiente` si `claro_ancho ≤ 0` (parámetro `ancho`) o si los barrotes quedarían de largo ≤ 0: en `mixto`, `alto_hoja − c − alto_zoclo − ct/2` (parámetro `alto_zoclo`); en `barrotes`, `alto_hoja − 2c` (parámetro `alto`). El barrote acepta las mismas familias que en la reja (cuadrado, redondo, tubular, tubo); el travesaño, cualquier perfil.
 
 Advertencias: `hoja_ancha` si `ancho_hoja > 2500` (conviene rueda o tensor); `panel_no_cabe_en_hoja` (la produce la medición).
 

@@ -131,3 +131,11 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Decisiones: el travesaño y el ancla aceptan cualquier perfil (la especificación no los limitaba).
 - Para validar con Hugo: el supuesto de la reja sigue siendo el de `docs/PENDIENTES_LINO.md` (1 solera de amarre, 4 anclas, 12 cm entre barrotes).
 - Sigue: F1-T9.
+
+## 2026-11-19 · F1-T9 · Plantilla `porton_abatible`
+
+- Hecho: `lib/motor/plantillas/porton_abatible.dart` (`PlantillaPortonAbatible`) con una o dos hojas y los rellenos mixto, barrotes y lámina; bisagras según la altura, pasador y picaporte; `claro_insuficiente` y la advertencia `hoja_ancha`. Lo programó el implementador. El director leyó el código y el revisor lo comparó línea por línea con el oráculo: no hay diferencias, salvo `hoja_ancha`, que pide la especificación. Se agregaron pruebas del orden de claves en casos que los dorados no cubren (mixto sin barrotes, barrotes con 2 hojas, lámina con 1 hoja).
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 319 pruebas en verde; coinciden completos `porton_3000x2200`, `porton_1hoja_barrotes_1000x2100` y `porton_lamina_2400x2000` (modelo con posiciones y medición); errores y `hoja_ancha` cubiertos; oráculo `ok`.
+- Decisiones: completé `docs/MOTOR_MEDICION.md` §4.2 con el rango de `alto_zoclo` (100 a 3000 mm), los casos de `claro_insuficiente` y las familias del barrote y del travesaño.
+- Para validar con Hugo: siguen los supuestos del portón de `docs/PENDIENTES_LINO.md` (2 bisagras por hoja hasta 2.00 m y 3 si es más alta, lámina sobrepuesta por fuera, puntos de soldadura cada 15 cm).
+- Sigue: F1-T10.
