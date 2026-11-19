@@ -139,3 +139,11 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Decisiones: completé `docs/MOTOR_MEDICION.md` §4.2 con el rango de `alto_zoclo` (100 a 3000 mm), los casos de `claro_insuficiente` y las familias del barrote y del travesaño.
 - Para validar con Hugo: siguen los supuestos del portón de `docs/PENDIENTES_LINO.md` (2 bisagras por hoja hasta 2.00 m y 3 si es más alta, lámina sobrepuesta por fuera, puntos de soldadura cada 15 cm).
 - Sigue: F1-T10.
+
+## 2026-11-19 · F1-T10 · Descripción del trabajo
+
+- Hecho: `lib/motor/plantillas/descripcion.dart` con `describirTrabajo`: una frase por plantilla con medidas en metros, materiales tomados del catálogo y "Incluye instalación." cuando aplica. El director fijó las reglas y los textos esperados en `docs/VISUAL.md` §5; el implementador lo programó; el director revisó el código.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 331 pruebas en verde; los textos de los 5 dorados están fijados en pruebas; oráculo `ok`.
+- Decisiones: la función vive en el motor porque la usan la IA, la voz y el PDF.
+- Para revisar por Lino: las frases de los dorados, por ejemplo "Portón abatible de 2 hojas, 3.00 × 2.20 m. Bastidor de PTR 2" x 2" cal. 14, zoclo de lamina lisa cal. 18 y barrotes de tubular 1" x 1" cal. 18. Incluye instalación." Los nombres de material salen tal cual del catálogo; los de ejemplo no llevan acentos ("lamina", "angulo"), y con el catálogo real de Hugo saldrán como él los escriba.
+- Sigue: cierre de la fase 1.

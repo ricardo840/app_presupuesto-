@@ -84,7 +84,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   §4.2, los tres rellenos.
   *Hecho cuando:* coinciden `porton_3000x2200`, `porton_1hoja_barrotes_1000x2100` y `porton_lamina_2400x2000`; errores y advertencia `hoja_ancha` cubiertos.
 
-- [ ] **F1-T10 · Descripción del trabajo** · I
+- [x] **F1-T10 · Descripción del trabajo** · I
   `describirTrabajo` por plantilla: una frase en español con medidas y materiales. `docs/VISUAL.md` §5.
   *Hecho cuando:* los textos de los 5 dorados están fijados en pruebas y se leen naturales.
 

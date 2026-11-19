@@ -137,7 +137,23 @@ Tamaño carta, una página:
 
 Una segunda página, solo para el herrero: lista de compra y lista de cortes por tramo, con sobrantes.
 
-La descripción la arma una función pura por plantilla (`describirTrabajo`), que también se usa en la tarjeta de confirmación y en la voz.
+La descripción la arma una función pura por plantilla (`describirTrabajo`), que también se usa en la tarjeta de confirmación y en la voz. Vive en el motor (`lib/motor/plantillas/descripcion.dart`) porque la usan la IA, la voz y lo visual:
+
+```dart
+String describirTrabajo(ModeloPiezas modelo, Map<String, Object?> parametros, Catalogo catalogo,
+    {Map<String, Object?> datosTrabajo = const {}});
+```
+
+- Medidas: `A × B m` con el ancho y el alto de `caja` en metros, siempre con dos decimales (`3.00 × 2.20 m`).
+- Material: el `nombre` del catálogo sin un paréntesis final (`Lamina lisa cal. 18 (4' x 10')` → `lamina lisa cal. 18`) y con la primera letra en minúscula, salvo que la primera palabra sea una sigla en mayúsculas (`PTR`).
+- Listas: elementos separados por coma y el último con "y"; si algún elemento ya contiene " y ", el último se une con ", y". Singular con 1 (`1 travesaño`, `1 ancla`); un elemento con cantidad 0 no se menciona.
+- `reja_ventana`: `Reja de ventana de A × B m: marco de M, N barrotes de B, T travesaños de S y K anclas.`
+- `porton_abatible`: `Portón abatible de H hojas, A × B m. Bastidor de X, …` y según el relleno: `mixto` → `zoclo de L y barrotes de B`; `barrotes` → `barrotes de B`; `lamina` → `tablero de L`.
+- `libre`: `Trabajo libre de A × B m: ` y, por cada artículo de piezas y paneles en orden de aparición, sus grupos unidos con "y" seguidos de `de M`.
+- Otra plantilla: `Trabajo de A × B m.`
+- Si `datosTrabajo['con_instalacion'] == true` se agrega ` Incluye instalación.`
+
+Ejemplos (los dorados): `Portón abatible de 2 hojas, 3.00 × 2.20 m. Bastidor de PTR 2" x 2" cal. 14, zoclo de lamina lisa cal. 18 y barrotes de tubular 1" x 1" cal. 18. Incluye instalación.` · `Trabajo libre de 7.50 × 0.90 m: pasamanos y postes de PTR 2" x 2" cal. 14, y barrotes de tubular 1" x 1" cal. 18. Incluye instalación.`
 
 Imagen para WhatsApp: tarjeta vertical de 1080 × 1350 con la imagen del trabajo, el título, el total y el nombre del negocio.
 
