@@ -74,3 +74,6 @@ Respuesta de Lino a P-10: el historial en GitHub sirve de respaldo. Nunca se fue
 
 **D-023 · 2026-11-19 · `main.dart` y `lib/app/` pueden importar cualquier capa.**
 `docs/ARQUITECTURA.md` §2 no dice qué importa `app`. Como arma la app (rutas hacia pantallas, proveedores con repositorios), se le permite todo; ninguna otra capa puede importar `main.dart`. La prueba de arquitectura también rechaza en el motor `DateTime.now`, `Stopwatch` y `Random`, y cualquier carpeta de `lib/` que no esté en la tabla.
+
+**D-024 · 2026-11-19 · Código `articulo_invalido` y paquete `collection` en el motor.**
+`docs/MOTOR_MEDICION.md` §2 exigía `peso_kg_m_manual` para la familia `otro`, pero no daba código para un artículo mal formado; se agrega `articulo_invalido` al documento. `collection` 1.19.1 (de dart.dev, ya venía como dependencia indirecta de Flutter) pasa a dependencia directa para comparar por valor los modelos inmutables del motor; `docs/ARQUITECTURA.md` §6 ya lo permite.

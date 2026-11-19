@@ -73,3 +73,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 5. Cambia el teléfono a tema oscuro y ábrela. → Abre sin errores (el tema oscuro bien hecho llega en la fase 4).
 6. Gira el teléfono. → El texto sigue centrado y legible.
 7. Desinstálala cuando termines si quieres; la siguiente versión se instala igual.
+
+## 2026-11-19 · F1-T1 · Catálogo y derivados
+
+- Hecho: `lib/motor/catalogo/` con `Articulo` (lectura y validación del JSON), `Catalogo`, `Constantes` y los derivados por familia (`DerivadosPerfil`, `DerivadosLamina`, `SinDerivados`), incluida la familia `otro` y el peso manual. Lo programó el implementador; el director fijó el contrato, leyó el código completo y lo pasó por el revisor, que confirmó las fórmulas contra §2.1 y el oráculo. Hubo una ronda de correcciones: un herraje con `familia` tronaba con un error interno, y faltaba exigir medidas mayores que cero.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 121 pruebas en verde; los derivados de los 11 artículos coinciden con `dorados/catalogo_derivados.json`; oráculo `ok`.
+- Decisiones: D-024, código `articulo_invalido` (agregado a `docs/MOTOR_MEDICION.md` §2) y `collection` como dependencia directa del motor.
+- Sigue: F1-T2.

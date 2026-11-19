@@ -48,7 +48,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
 
 `docs/MOTOR_MEDICION.md` completo. Al cerrar, el motor mide los cinco trabajos dorados.
 
-- [ ] **F1-T1 · Catálogo y derivados** · I +R
+- [x] **F1-T1 · Catálogo y derivados** · I +R
   Modelos `Articulo` y `Catalogo`, lectura del formato de `test/fixtures/entradas/catalogo.json`, derivados por familia, familia `otro` y peso manual. §2.
   *Hecho cuando:* coincide con `dorados/catalogo_derivados.json`; clave inexistente da `articulo_desconocido`; el peso manual manda sobre el teórico.
 

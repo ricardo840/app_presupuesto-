@@ -45,6 +45,8 @@ Un artículo tiene `clave` (única, minúsculas, con guiones: `ptr-2x2-c14`), `n
 
 En los JSON el precio va en pesos con dos decimales. En la base de datos se guarda en centavos enteros.
 
+Un artículo mal formado (falta un campo que su tipo exige, falta una medida de su `geometria`, tipo, familia o unidad de compra desconocidos o no válidos para su tipo, `otro` sin `peso_kg_m_manual`, herraje o consumible con `familia`, una medida, largo de tramo, hoja o peso manual que no sea mayor que cero, precio negativo, clave repetida) da el error `articulo_invalido`, con la clave y el motivo en el detalle.
+
 ### 2.1 Valores derivados de un perfil
 
 Con `geometria` en mm. Las esquinas se toman rectas (aproximación suficiente para cotizar).
