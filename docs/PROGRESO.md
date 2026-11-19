@@ -94,3 +94,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 169 pruebas en verde; los 10 casos de `dorados/casos_cortes.json` coinciden; resultado determinista; oráculo `ok`.
 - Decisiones: entradas imposibles (tramo ≤ 0, kerf negativo, largo ≤ 0) dan `ArgumentError`, porque son errores de programación: las plantillas validan antes.
 - Sigue: F1-T4.
+
+## 2026-11-19 · F1-T4 · Modelo de piezas
+
+- Hecho: `lib/motor/medicion/modelo.dart` con `ModeloPiezas`, `Pieza`, `Panel`, `Herraje`, `Advertencia`, `Punto3` y `TipoCorte`, inmutables y con JSON escrito a mano. Lo programó el implementador; el director fijó el contrato y leyó el código completo.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 178 pruebas en verde; para los 5 trabajos dorados, `fromJson(toJson(x)) == x` y el JSON coincide con el dorado en claves, orden y nulos; oráculo `ok`.
+- Decisiones: una advertencia es un código con datos libres (`articulo`, `panel`…), escrita como JSON plano; `detalle` conserva los enteros como enteros para que la ida y vuelta sea exacta.
+- Sigue: F1-T5.

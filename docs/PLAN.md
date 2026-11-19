@@ -60,7 +60,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   §5.
   *Hecho cuando:* pasan todos los casos de `dorados/casos_cortes.json`; el resultado es determinista.
 
-- [ ] **F1-T4 · Modelo de piezas** · I
+- [x] **F1-T4 · Modelo de piezas** · I
   Clases inmutables y su JSON. §3.
   *Hecho cuando:* para el `esperado.modelo` de cada trabajo dorado, `fromJson(toJson(x))` es igual a `x`.
 
