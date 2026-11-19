@@ -68,7 +68,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   `medir(modelo, catalogo)`. §6.
   *Hecho cuando:* al medir el `esperado.modelo` de cada uno de los 5 trabajos dorados coinciden `despiece`, `cortes`, `por_articulo`, `uniones`, `cantidades` y `advertencias`; las unidades de compra `kg`, `m` y `m2` tienen pruebas con cuentas a mano.
 
-- [ ] **F1-T6 · Plantillas: interfaz, esquema, validación y registro** · D→I
+- [x] **F1-T6 · Plantillas: interfaz, esquema, validación y registro** · D→I
   El director fija la interfaz `Plantilla` y `ParametroDef`. §4.
   *Hecho cuando:* una plantilla de prueba valida cada error genérico (`parametro_faltante`, `fuera_de_rango`, `articulo_desconocido`, `familia_no_permitida`) desde su esquema; el registro devuelve plantillas por id.
 

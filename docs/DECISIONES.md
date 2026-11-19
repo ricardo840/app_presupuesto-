@@ -77,3 +77,6 @@ Respuesta de Lino a P-10: el historial en GitHub sirve de respaldo. Nunca se fue
 
 **D-024 · 2026-11-19 · Código `articulo_invalido` y paquete `collection` en el motor.**
 `docs/MOTOR_MEDICION.md` §2 exigía `peso_kg_m_manual` para la familia `otro`, pero no daba código para un artículo mal formado; se agrega `articulo_invalido` al documento. `collection` 1.19.1 (de dart.dev, ya venía como dependencia indirecta de Flutter) pasa a dependencia directa para comparar por valor los modelos inmutables del motor; `docs/ARQUITECTURA.md` §6 ya lo permite.
+
+**D-025 · 2026-11-19 · Interfaz de plantillas y validación genérica.**
+El director fijó `Plantilla`, `ParametroDef`, `Condicion` y `Problema` (`lib/motor/plantillas/plantilla.dart`, `lib/motor/problema.dart`). Se agregaron a `docs/MOTOR_MEDICION.md` §4 lo que faltaba: los tipos `texto` y `lista` (para el trabajo libre), los tipos de artículo aceptados junto a las familias (un herraje no tiene familia), el orden de la validación (defectos, esquema, reglas propias) y los códigos `valor_invalido` y `plantilla_desconocida`. Una opción desconocida da `fuera_de_rango`, salvo que el parámetro declare su propio código (el portón declara `relleno_no_soportado`). Las advertencias de una plantilla van en el modelo, no en la validación.

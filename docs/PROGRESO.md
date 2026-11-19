@@ -109,3 +109,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Decisiones: si una pieza usa un artículo que no es perfil (o un panel uno que no es lámina, o un herraje uno que no es herraje), la medición da `familia_no_permitida`; el oráculo no lo revisa, pero las plantillas ya lo impiden.
 - Para revisar por Lino (técnico, no urge): el oráculo suma con la versión de Python instalada (3.11.9). Si algún día se regeneran los dorados con Python 3.12 o más nuevo, la suma cambia de método y podría mover el último decimal.
 - Sigue: F1-T6.
+
+## 2026-11-19 · F1-T6 · Plantillas: interfaz, esquema, validación y registro
+
+- Hecho: el director escribió la interfaz (`Plantilla`, `ParametroDef`, condiciones de `requerido_si`, `Problema`). El implementador programó la validación genérica desde el esquema (`validarParametros`, `aplicarPlantilla`), el registro (`RegistroPlantillas`) y `numeroBarrotes`. El director leyó el código completo.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 265 pruebas en verde. Una plantilla de prueba da cada error genérico desde su esquema (`parametro_faltante`, `valor_invalido`, `fuera_de_rango`, `articulo_desconocido`, `familia_no_permitida`, código propio de opción) y el registro devuelve plantillas por id o `plantilla_desconocida`. Oráculo `ok`.
+- Decisiones: D-025 (tipos `texto` y `lista`, orden de la validación, códigos `valor_invalido` y `plantilla_desconocida`, advertencias dentro del modelo).
+- Sigue: F1-T7.

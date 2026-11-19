@@ -121,18 +121,20 @@ Para dibujar, cada barra es una caja de `cara × fondo × largo` centrada en su 
 
 Una plantilla es una función pura `(parámetros, catálogo) → modelo de piezas`, más un **esquema** que describe sus parámetros. El formulario de la app y las herramientas de la IA se generan desde el esquema: agregar una plantilla no requiere tocar la interfaz.
 
-Cada parámetro del esquema declara: `clave`, `etiqueta`, `tipo` (`longitud`, `entero`, `articulo`, `opcion`, `booleano`), `defecto`, `min`, `max`, `opciones`, `familias` permitidas (para artículos), `requerido_si` y `ayuda` (una frase que también lee la IA).
+Cada parámetro del esquema declara: `clave`, `etiqueta`, `tipo` (`longitud`, `entero`, `articulo`, `opcion`, `booleano`, `texto`, `lista`), `defecto`, `min`, `max`, `opciones`, los tipos de artículo y las `familias` permitidas (para artículos; un herraje no tiene familia), si es `requerido`, `requerido_si` y `ayuda` (una frase que también lee la IA). Un parámetro `lista` declara además los `campos` de cada elemento con el mismo formato (lo usa `libre`). `requerido_si` es una condición sobre otro parámetro: "mayor que un número" (`travesanos > 0`) o "es una de estas opciones" (`relleno` en `mixto`, `barrotes`). Si la condición no se cumple, el parámetro no se exige ni se valida.
 
-Validación, antes de generar. Devuelve una lista de problemas; si hay errores no se genera el modelo.
+Validación, antes de generar. Primero se ponen los valores por defecto donde falte un valor; después se revisa cada parámetro contra el esquema; si no hubo errores, la plantilla aplica sus reglas propias (`claro_insuficiente`). Devuelve una lista de problemas, cada uno con su código y el parámetro al que se refiere (en una lista, `piezas[2].largo`); si hay errores no se genera el modelo.
 
 | Código de error | Cuándo |
 |---|---|
-| `parametro_faltante` | falta un parámetro requerido |
-| `fuera_de_rango` | un valor queda fuera de `min`–`max` |
+| `parametro_faltante` | falta un parámetro requerido y no tiene valor por defecto |
+| `valor_invalido` | el valor no es del tipo del parámetro (texto donde va una medida, un entero con decimales) |
+| `fuera_de_rango` | un valor queda fuera de `min`–`max`, o una opción no está en `opciones` (salvo que el parámetro declare otro código para eso) |
 | `articulo_desconocido` | la clave no está en el catálogo |
-| `familia_no_permitida` | el artículo no es de una familia aceptada |
+| `familia_no_permitida` | el artículo no es del tipo o de una familia aceptada |
 | `claro_insuficiente` | las medidas no dejan espacio entre los marcos |
-| `relleno_no_soportado` | opción de relleno que la plantilla no conoce |
+| `relleno_no_soportado` | opción de relleno que la plantilla no conoce (el código que declara el parámetro `relleno` del portón) |
+| `plantilla_desconocida` | el registro no tiene una plantilla con ese id |
 
 Función compartida:
 
