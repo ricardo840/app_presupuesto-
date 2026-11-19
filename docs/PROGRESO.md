@@ -101,3 +101,11 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 178 pruebas en verde; para los 5 trabajos dorados, `fromJson(toJson(x)) == x` y el JSON coincide con el dorado en claves, orden y nulos; oráculo `ok`.
 - Decisiones: una advertencia es un código con datos libres (`articulo`, `panel`…), escrita como JSON plano; `detalle` conserva los enteros como enteros para que la ida y vuelta sea exacta.
 - Sigue: F1-T5.
+
+## 2026-11-19 · F1-T5 · Medición
+
+- Hecho: `lib/motor/medicion/medir.dart` con `medir(modelo, catalogo)`: despiece agrupado, planes de corte, resumen por artículo con costo de compra y usado según la unidad, uniones con empalmes, las 26 cantidades de las recetas y las advertencias `pieza_mayor_que_tramo` y `panel_no_cabe_en_hoja`. Lo programó el implementador. El director leyó el código completo y el revisor lo comparó línea por línea con el oráculo: no hay diferencias. El revisor también comprobó las cuentas a mano de las pruebas.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 233 pruebas en verde; los 5 trabajos dorados coinciden en despiece, cortes, por artículo, uniones, cantidades y advertencias; unidades de compra `kg`, `m` y `m2` (y `tramo` y `hoja`) con cuentas a mano; oráculo `ok`.
+- Decisiones: si una pieza usa un artículo que no es perfil (o un panel uno que no es lámina, o un herraje uno que no es herraje), la medición da `familia_no_permitida`; el oráculo no lo revisa, pero las plantillas ya lo impiden.
+- Para revisar por Lino (técnico, no urge): el oráculo suma con la versión de Python instalada (3.11.9). Si algún día se regeneran los dorados con Python 3.12 o más nuevo, la suma cambia de método y podría mover el último decimal.
+- Sigue: F1-T6.

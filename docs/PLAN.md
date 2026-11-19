@@ -64,7 +64,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   Clases inmutables y su JSON. §3.
   *Hecho cuando:* para el `esperado.modelo` de cada trabajo dorado, `fromJson(toJson(x))` es igual a `x`.
 
-- [ ] **F1-T5 · Medición** · I +R
+- [x] **F1-T5 · Medición** · I +R
   `medir(modelo, catalogo)`. §6.
   *Hecho cuando:* al medir el `esperado.modelo` de cada uno de los 5 trabajos dorados coinciden `despiece`, `cortes`, `por_articulo`, `uniones`, `cantidades` y `advertencias`; las unidades de compra `kg`, `m` y `m2` tienen pruebas con cuentas a mano.
 
