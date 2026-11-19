@@ -80,3 +80,6 @@ Respuesta de Lino a P-10: el historial en GitHub sirve de respaldo. Nunca se fue
 
 **D-025 · 2026-11-19 · Interfaz de plantillas y validación genérica.**
 El director fijó `Plantilla`, `ParametroDef`, `Condicion` y `Problema` (`lib/motor/plantillas/plantilla.dart`, `lib/motor/problema.dart`). Se agregaron a `docs/MOTOR_MEDICION.md` §4 lo que faltaba: los tipos `texto` y `lista` (para el trabajo libre), los tipos de artículo aceptados junto a las familias (un herraje no tiene familia), el orden de la validación (defectos, esquema, reglas propias) y los códigos `valor_invalido` y `plantilla_desconocida`. Una opción desconocida da `fuera_de_rango`, salvo que el parámetro declare su propio código (el portón declara `relleno_no_soportado`). Las advertencias de una plantilla van en el modelo, no en la validación.
+
+**D-026 · 2026-11-19 · F2-T6 arma el registro estándar de plantillas.**
+Al cerrar la fase 1, `RegistroPlantillas` existe pero nadie lo llena con las tres plantillas. Se agrega ese paso a F2-T6, que es donde se usa por primera vez.

@@ -147,3 +147,25 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Decisiones: la función vive en el motor porque la usan la IA, la voz y el PDF.
 - Para revisar por Lino: las frases de los dorados, por ejemplo "Portón abatible de 2 hojas, 3.00 × 2.20 m. Bastidor de PTR 2" x 2" cal. 14, zoclo de lamina lisa cal. 18 y barrotes de tubular 1" x 1" cal. 18. Incluye instalación." Los nombres de material salen tal cual del catálogo; los de ejemplo no llevan acentos ("lamina", "angulo"), y con el catálogo real de Hugo saldrán como él los escriba.
 - Sigue: cierre de la fase 1.
+
+## 2026-11-19 · Cierre de fase 1
+
+- Hecho: el motor de medición completo (`docs/MOTOR_MEDICION.md`). Hay catálogo con valores derivados, calibres y pulgadas, optimizador de cortes, modelo de piezas, medición, validación genérica de parámetros y registro, las plantillas `libre`, `reja_ventana` y `porton_abatible`, y la frase que describe cada trabajo. El motor mide los cinco trabajos dorados igual que el oráculo, posiciones incluidas.
+- Verificación: `verify` completo en verde (331 pruebas; oráculo `ok` en los 9 dorados); `flutter build apk --debug` compila.
+- Requisitos de `docs/ESPECIFICACION.md` §5:
+  - R-02 (trabajo libre), parte del motor: `lib/motor/plantillas/libre.dart`, con su prueba `test/motor/plantillas/libre_test.dart` (dorado `libre_barandal_7500` de punta a punta). La pantalla queda para F4-T6.
+  - R-28 (plantillas reja, portón abatible y libre): `reja_ventana.dart`, `porton_abatible.dart` y `libre.dart` en `lib/motor/plantillas/`, con sus pruebas en `test/motor/plantillas/` contra los 5 dorados. Las demás plantillas son de la fase 9.
+  - No quedó ningún requisito de la fase sin cubrir.
+- Decisiones por defecto: D-024 (`articulo_invalido`, `collection`), D-025 (interfaz de plantillas, tipos `texto` y `lista`, códigos `valor_invalido` y `plantilla_desconocida`) y D-026 (registro estándar en F2-T6). Se completó la especificación donde le faltaban datos: rangos del trabajo libre y de `alto_zoclo`, cuándo da el portón `claro_insuficiente`, el formato de pulgadas, `medida_invalida` y las reglas de la descripción. También se agregaron las advertencias `sin_barrotes` y `hoja_ancha`, que pedía la especificación y el oráculo no tenía.
+- Pendiente: nada de la fase 1. El plan de la fase 2 ganó un paso en F2-T6 (D-026).
+- Para Lino, antes o durante la fase 2: nada bloquea. Conviene que Hugo revise los supuestos de "Para validar con el herrero" en `docs/PENDIENTES_LINO.md` (bisagras, anclas, separación de barrotes, kerf). En la fase 2 se calibra la forma de cobrar, así que desde ya sirve H-01 (3 a 5 cotizaciones reales de Hugo).
+
+### Para probar en el teléfono — fase 1
+
+Esta fase es el "cerebro" que mide; todavía no tiene pantallas nuevas, así que en el teléfono la app se ve igual que en la fase 0.
+
+1. Instala el `app-debug.apk` nuevo (`build/app/outputs/flutter-apk/`) encima del anterior. → Se actualiza sin pedir desinstalar.
+2. Ábrela. → Sigue mostrando "LinForge" y "Cotizador de herrería", sin errores.
+3. Ábrela en modo avión. → Abre igual.
+4. Sin teléfono: lee en voz alta las frases de los 5 trabajos de ejemplo (están en la entrada de F1-T10, arriba). → Deben sonar como Hugo describiría el trabajo; si algo suena raro, anótalo en "Correcciones de Lino".
+5. Sin teléfono: revisa con Hugo la lista "Para validar con el herrero" de `docs/PENDIENTES_LINO.md`. → Lo que no cuadre con su forma de trabajar, anótalo ahí mismo.

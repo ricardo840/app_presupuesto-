@@ -113,7 +113,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   *Hecho cuando:* coinciden todas las `presentaciones` de los dorados; una prueba con muchos casos generados con semilla fija confirma que `Σ items + impuesto = total`.
 
 - [ ] **F2-T6 · `calcularPresupuesto`** · D→I
-  La puerta de entrada. `docs/ARQUITECTURA.md` §3.
+  La puerta de entrada. `docs/ARQUITECTURA.md` §3. Incluye el registro estándar con `libre`, `reja_ventana` y `porton_abatible`, y usa `aplicarPlantilla` y `medir` de la fase 1.
   *Hecho cuando:* los 5 dorados pasan desde su `entrada` hasta la evaluación; una entrada inválida regresa `problemas` con código y no lanza; dos llamadas iguales dan JSON idéntico; se mide y anota el tiempo del portón dorado.
 
 - [ ] **F2-T7 · Calibración** · I
