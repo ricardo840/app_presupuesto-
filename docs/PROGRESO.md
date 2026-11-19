@@ -123,3 +123,11 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 274 pruebas en verde; `dorados/libre_barandal_7500.json` coincide de punta a punta (modelo y medición), con su advertencia de empalme; oráculo `ok`.
 - Decisiones: rangos del esquema, que la especificación no fijaba (medidas de 1 a 50 000 mm, cantidad de 1 a 10 000, uniones de 0 a 100 000), anotados en `docs/MOTOR_MEDICION.md` §4.3.
 - Sigue: F1-T8.
+
+## 2026-11-19 · F1-T8 · Plantilla `reja_ventana`
+
+- Hecho: `lib/motor/plantillas/reja_ventana.dart` (`PlantillaRejaVentana`): esquema de §4.1, `claro_insuficiente`, marco a inglete, barrotes, soleras de amarre por detrás, anclas sin posición y la advertencia `sin_barrotes`. Lo programó el implementador. El director leyó el código y el revisor lo comparó línea por línea con el oráculo: no hay diferencias, salvo `sin_barrotes`, que pide la especificación y el oráculo no tiene. Se agregaron pruebas de bordes: 2 travesaños, marco tubular rectangular y cero barrotes.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 293 pruebas en verde; `dorados/reja_1200x1000.json` coincide completo (modelo con posiciones y medición); las cuentas de §7 están fijadas en pruebas; hay un caso por cada error; oráculo `ok`.
+- Decisiones: el travesaño y el ancla aceptan cualquier perfil (la especificación no los limitaba).
+- Para validar con Hugo: el supuesto de la reja sigue siendo el de `docs/PENDIENTES_LINO.md` (1 solera de amarre, 4 anclas, 12 cm entre barrotes).
+- Sigue: F1-T9.

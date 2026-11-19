@@ -76,7 +76,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   §4.3.
   *Hecho cuando:* `dorados/libre_barandal_7500.json` coincide de punta a punta (modelo y medición), con su advertencia de empalme.
 
-- [ ] **F1-T8 · Plantilla `reja_ventana`** · I +R
+- [x] **F1-T8 · Plantilla `reja_ventana`** · I +R
   §4.1 y §7.
   *Hecho cuando:* `dorados/reja_1200x1000.json` coincide (modelo completo con posiciones, y medición); hay un caso por cada error y por la advertencia `sin_barrotes`.
 
