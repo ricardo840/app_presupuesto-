@@ -68,3 +68,6 @@ Lino revisa cada fase antes de empezar la siguiente. Sustituye el paso "continú
 
 **D-021 · 2026-11-19 · Cada commit se sube a GitHub.**
 Respuesta de Lino a P-10: el historial en GitHub sirve de respaldo. Nunca se fuerza un push ni se reescribe la historia. Claude Code sigue pidiendo confirmación de cada `git push` en `.claude/settings.json`; quitarla es decisión de Lino.
+
+**D-022 · 2026-11-19 · Widgets de `cupertino_ui` 1.1.7; solo Android como plataforma.**
+`cupertino_ui` es el paquete oficial (publicador flutter.dev, BSD-3, todas las plataformas) que sustituye a `package:flutter/cupertino.dart`; su README pide migrar a `package:cupertino_ui/cupertino_ui.dart`. Con Flutter 3.47.1 la importación vieja todavía existe y la plantilla de `flutter create` la sigue usando, pero se adopta el paquete desde el principio para no migrar después. Va con P-03 (Cupertino). `material_ui` no se agrega mientras no haga falta. El escritorio de Windows no se agrega como plataforma: `flutter doctor` no lo reporta listo (falta Visual Studio).

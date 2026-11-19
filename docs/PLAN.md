@@ -32,7 +32,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   Ejecuta `flutter --version`, `flutter doctor -v`, `git --version` y `python --version`. Si no hay repositorio, `git init` y un primer commit con el kit tal como llegó (`kit inicial`).
   *Hecho cuando:* `docs/PROGRESO.md` tiene una entrada con las versiones y las plataformas que `flutter doctor` reporta listas; `python tool/oraculo/oraculo.py --verificar` da `ok` en los 9 archivos, o se anotó que no hay Python.
 
-- [ ] **F0-T2 · Proyecto de Flutter** · D
+- [x] **F0-T2 · Proyecto de Flutter** · D
   `flutter create --project-name linforge --org mx.lino --platforms android .` Agrega `windows` si está listo para desarrollo. Lee `docs/ARQUITECTURA.md` §7 y §10. Sustituye la app de ejemplo por una pantalla mínima con el nombre de la app y borra la prueba de ejemplo.
   *Hecho cuando:* los archivos del kit siguen intactos (`git diff` solo muestra archivos nuevos); `flutter analyze` limpio; `flutter test` corre; `flutter build apk --debug` compila, o se anotó qué falta.
 

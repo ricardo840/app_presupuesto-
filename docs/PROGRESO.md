@@ -33,3 +33,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: `python tool/oraculo/oraculo.py --verificar` da `ok` en los 9 dorados.
 - Para revisar por Lino: para instalar en el teléfono hará falta, desde Android Studio, instalar "Android SDK Command-line Tools" y después correr `flutter doctor --android-licenses`. No bloquea las pruebas.
 - Sigue: F0-T2.
+
+## 2026-11-19 · F0-T2 · Proyecto de Flutter
+
+- Hecho: `flutter create --project-name linforge --org mx.lino --platforms android .`; la app de ejemplo se sustituyó por una pantalla mínima con el nombre LinForge, hecha con `cupertino_ui`; la prueba de ejemplo se borró y la reemplaza `test/main_test.dart`.
+- Verificación: `git status` solo mostró archivos nuevos (el kit quedó intacto); `dart format` sin cambios; `flutter analyze` limpio; `flutter test` 1 prueba en verde; `flutter build apk --debug` compila (`app-debug.apk`, unos 3.5 min). Todavía no existe el procedimiento `verify` completo: llega con F0-T3.
+- Decisiones: D-022, `cupertino_ui` 1.1.7 en lugar de `package:flutter/cupertino.dart`, y solo Android como plataforma.
+- Sigue: F0-T3.
