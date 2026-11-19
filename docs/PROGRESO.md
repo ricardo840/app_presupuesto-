@@ -169,3 +169,5 @@ Esta fase es el "cerebro" que mide; todavía no tiene pantallas nuevas, así que
 3. Ábrela en modo avión. → Abre igual.
 4. Sin teléfono: lee en voz alta las frases de los 5 trabajos de ejemplo (están en la entrada de F1-T10, arriba). → Deben sonar como Hugo describiría el trabajo; si algo suena raro, anótalo en "Correcciones de Lino".
 5. Sin teléfono: revisa con Hugo la lista "Para validar con el herrero" de `docs/PENDIENTES_LINO.md`. → Lo que no cuadre con su forma de trabajar, anótalo ahí mismo.
+
+Verificado en dispositivo el 2026-11-19, en el teléfono de Lino (23090RA98G, Android 13): la versión de la fase 1 se instaló por cable con `flutter install` y abre con "LinForge" y "Cotizador de herrería", en tema oscuro y en horizontal (captura de pantalla). Ese teléfono necesitó "Instalar vía USB" activado en las opciones de desarrollador. Falta probar: abrir en modo avión y los pasos 4 y 5.
