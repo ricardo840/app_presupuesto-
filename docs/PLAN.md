@@ -28,7 +28,7 @@ La app es útil desde el cierre de la fase 4 y se puede enseñar a un cliente de
 
 Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas de arquitectura. La hace el director sin delegar, salvo F0-T4.
 
-- [ ] **F0-T1 · Entorno** · D
+- [x] **F0-T1 · Entorno** · D
   Ejecuta `flutter --version`, `flutter doctor -v`, `git --version` y `python --version`. Si no hay repositorio, `git init` y un primer commit con el kit tal como llegó (`kit inicial`).
   *Hecho cuando:* `docs/PROGRESO.md` tiene una entrada con las versiones y las plataformas que `flutter doctor` reporta listas; `python tool/oraculo/oraculo.py --verificar` da `ok` en los 9 archivos, o se anotó que no hay Python.
 

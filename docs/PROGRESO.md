@@ -24,3 +24,12 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: `python tool/oraculo/oraculo.py --verificar` da `ok` en los 9 archivos de `test/fixtures/dorados/`.
 - Para revisar por Lino: las decisiones de `docs/PENDIENTES_LINO.md`. Las más urgentes son P-01 (nombre e identificador), P-03 (estilo) y P-04 (qué significa "Opciones").
 - Sigue: F0-T1.
+
+## 2026-11-19 · F0-T1 · Entorno
+
+- Hecho: revisión del entorno. El repositorio ya existía (en GitHub, `origin`).
+- Versiones: Flutter 3.47.1 estable (Dart 3.13.1, DevTools 2.60.0); Git 2.49.0.windows.1; Python 3.11.9; Windows 11 26H2.
+- Plataformas según `flutter doctor`: listas Windows (como sistema), Chrome y Edge para web; Android con avisos (SDK 36.1.0 instalado, pero faltan `cmdline-tools` y no se han aceptado las licencias); escritorio Windows no está listo (falta Visual Studio con "Desktop development with C++"), así que no se agrega esa plataforma.
+- Verificación: `python tool/oraculo/oraculo.py --verificar` da `ok` en los 9 dorados.
+- Para revisar por Lino: para instalar en el teléfono hará falta, desde Android Studio, instalar "Android SDK Command-line Tools" y después correr `flutter doctor --android-licenses`. No bloquea las pruebas.
+- Sigue: F0-T2.
