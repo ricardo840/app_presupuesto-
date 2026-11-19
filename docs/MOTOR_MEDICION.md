@@ -75,7 +75,9 @@ Espesores nominales que usan los proveedores en México (semilla editable; el es
 |---|---|---|---|---|---|---|---|---|---|---|
 | mm | 3.429 | 3.048 | 2.667 | 2.286 | 1.905 | 1.524 | 1.219 | 0.914 | 0.762 | 0.610 |
 
-Las medidas comerciales se capturan en pulgadas y fracciones (`1 1/2`, `3/4`, `2`). Conversión: `mm = pulgadas · 25.4`. El analizador acepta `"1 1/2"`, `"1-1/2"`, `"1.5"` y `"3/4"`.
+Las medidas comerciales se capturan en pulgadas y fracciones (`1 1/2`, `3/4`, `2`). Conversión: `mm = pulgadas · 25.4`. El analizador acepta `"1 1/2"`, `"1-1/2"`, `"1.5"` y `"3/4"`, con espacios alrededor y un `"` final opcional. Un texto vacío, que no sea medida, con denominador cero, con fracción impropia en la forma mixta (`1 3/2`) o que no dé más de cero, da el error `medida_invalida`.
+
+De mm a texto: se escribe en dieciseisavos simplificados (`2`, `3/4`, `1 1/2`, `1 3/16`) cuando la medida queda a menos de 0.01 mm de uno; si no, no hay texto en pulgadas y se muestra en mm.
 
 ## 3. Modelo de piezas
 

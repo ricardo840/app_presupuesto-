@@ -80,3 +80,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 121 pruebas en verde; los derivados de los 11 artículos coinciden con `dorados/catalogo_derivados.json`; oráculo `ok`.
 - Decisiones: D-024, código `articulo_invalido` (agregado a `docs/MOTOR_MEDICION.md` §2) y `collection` como dependencia directa del motor.
 - Sigue: F1-T2.
+
+## 2026-11-19 · F1-T2 · Calibres y pulgadas
+
+- Hecho: `lib/motor/catalogo/calibres.dart` (tabla de calibres por defecto y consulta con tabla propia) y `lib/motor/catalogo/pulgadas.dart` (`pulgadasAMm` y `mmATextoPulgadas` en dieciseisavos). Lo programó el implementador; el director revisó el código y corrigió un número con demasiados dígitos que no daba `medida_invalida`.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 148 pruebas en verde; oráculo `ok`.
+- Decisiones: código `medida_invalida` y formato del texto en pulgadas, agregados a `docs/MOTOR_MEDICION.md` §2.2. Una fracción suelta impropia (`3/2`) se acepta; en la forma mixta la fracción debe ser propia; `1 - 1/2`, con espacios alrededor del guion, se rechaza.
+- Sigue: F1-T3.

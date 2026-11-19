@@ -52,7 +52,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   Modelos `Articulo` y `Catalogo`, lectura del formato de `test/fixtures/entradas/catalogo.json`, derivados por familia, familia `otro` y peso manual. §2.
   *Hecho cuando:* coincide con `dorados/catalogo_derivados.json`; clave inexistente da `articulo_desconocido`; el peso manual manda sobre el teórico.
 
-- [ ] **F1-T2 · Calibres y pulgadas** · I
+- [x] **F1-T2 · Calibres y pulgadas** · I
   Tabla de calibres como semilla y conversión de medidas en pulgadas. §2.2.
   *Hecho cuando:* `"1 1/2"`, `"1-1/2"`, `"1.5"`, `"3/4"` y `"2"` se convierten bien; lo inválido da error; calibre 14 → 1.905 mm; ida y vuelta de mm a texto en pulgadas para las medidas comerciales.
 
