@@ -47,3 +47,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 22 pruebas en verde. Las pruebas demuestran que el verificador rechaza importaciones prohibidas (motor→datos, relativas entre capas, Flutter, `dart:io` y `dart:ui` en el motor, reloj y azar) y que el cargador lee los 9 dorados. Un archivo temporal con `print`, sin tipo de retorno y con `List` sin tipo dio 6 avisos del análisis; se borró.
 - Decisiones: D-023, `main.dart` y `app/` pueden importar cualquier capa.
 - Sigue: F0-T4 (al implementador).
+
+## 2026-11-19 · F0-T4 · Números y errores del motor
+
+- Hecho: `lib/motor/numeros.dart` (`eps`, `techo`, `piso`, `cabe`, `redondear`, `centavos`, con el empuje de 1e-7 de `docs/MOTOR_RECETAS.md` §1) y `lib/motor/error_motor.dart` (`ErrorMotor(codigo, detalle:, posicion:)` con igualdad por valor). Lo programó el implementador; el director fijó el contrato y revisó el diff completo.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 47 pruebas en verde (24 nuevas: todos los casos del plan, cero y valores de 1e9); oráculo `ok` en los 9 dorados.
+- Decisiones: la constante se llama `eps` (no `EPS`) por la convención de nombres de Dart; `redondear` nunca devuelve -0.0.
+- Sigue: cierre de la fase 0.

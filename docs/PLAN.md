@@ -40,7 +40,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   `analysis_options.yaml` estricto (`strict-casts`, `strict-inference`, `strict-raw-types`, sin `print`, tipos de retorno declarados). `test/arquitectura_test.dart` con las reglas de `docs/ARQUITECTURA.md` §2. `test/soporte/` con el cargador de `test/fixtures/` y los comparadores con tolerancia.
   *Hecho cuando:* una prueba demuestra que el verificador de arquitectura rechaza un `import` prohibido; el cargador lee los 9 dorados; `/verify` en verde.
 
-- [ ] **F0-T4 · Números y errores del motor** · I
+- [x] **F0-T4 · Números y errores del motor** · I
   `lib/motor/numeros.dart` y `lib/motor/error_motor.dart`. Lee `docs/MOTOR_MEDICION.md` §1 y `docs/MOTOR_RECETAS.md` §1.
   *Hecho cuando:* pruebas de `techo(2.0000000001) = 2`, `piso(2.9999999999) = 3`, `redondear(2.5) = 3`, `redondear(-2.5) = -3`, `redondear(1.005, 2) = 1.01`, `centavos(2.345) = 235`, `centavos(-1.005) = -101`, cero y valores de 1e9.
 
