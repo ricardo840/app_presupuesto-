@@ -54,3 +54,22 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 47 pruebas en verde (24 nuevas: todos los casos del plan, cero y valores de 1e9); oráculo `ok` en los 9 dorados.
 - Decisiones: la constante se llama `eps` (no `EPS`) por la convención de nombres de Dart; `redondear` nunca devuelve -0.0.
 - Sigue: cierre de la fase 0.
+
+## 2026-11-19 · Cierre de fase 0
+
+- Hecho: proyecto de Flutter `linforge` (`mx.lino.linforge`, solo Android) con una pantalla mínima que dice "LinForge"; análisis estricto; prueba que vigila las capas de la arquitectura; cargador de dorados y comparadores con tolerancia; números y errores base del motor.
+- Verificación: `verify` completo en verde (47 pruebas, oráculo `ok` en los 9 dorados); `flutter build apk --debug` compila.
+- Requisitos de `docs/ESPECIFICACION.md` §5: la fase 0 no cubre ninguno en particular (R-25, "sin conexión", aplica a todas y por ahora no hay nada que use la red).
+- Decisiones por defecto: D-022 (`cupertino_ui` en lugar de la importación vieja de Flutter; solo Android) y D-023 (`main.dart` y `app/` pueden importar cualquier capa).
+- Pendiente: nada de la fase 0. El plan de la fase 1 no necesitó cambios.
+- Para Lino, antes o durante la fase 1: nada bloquea. Siguen abiertas P-04 a P-09 y lo que hace falta de Hugo (H-01 a H-04), pero tienen valor por defecto y no se necesitan hasta fases posteriores. Para instalar en el teléfono conviene instalar en Android Studio "Android SDK Command-line Tools" y aceptar las licencias (`flutter doctor --android-licenses`).
+
+### Para probar en el teléfono — fase 0
+
+1. Copia al teléfono Android el archivo `build/app/outputs/flutter-apk/app-debug.apk` (por cable o subiéndolo a tu correo) y ábrelo. Android pedirá permiso para instalar apps de origen desconocido: acéptalo solo para este archivo. → Se instala sin error.
+2. Busca la app en el cajón de aplicaciones. → Aparece con el nombre **LinForge** (por ahora con el ícono genérico de Flutter).
+3. Ábrela. → Se ve una barra arriba con "LinForge" y al centro el texto "Cotizador de herrería".
+4. Activa el modo avión y vuelve a abrirla. → Abre igual: no necesita internet.
+5. Cambia el teléfono a tema oscuro y ábrela. → Abre sin errores (el tema oscuro bien hecho llega en la fase 4).
+6. Gira el teléfono. → El texto sigue centrado y legible.
+7. Desinstálala cuando termines si quieres; la siguiente versión se instala igual.
