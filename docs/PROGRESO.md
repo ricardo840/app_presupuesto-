@@ -87,3 +87,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 148 pruebas en verde; oráculo `ok`.
 - Decisiones: código `medida_invalida` y formato del texto en pulgadas, agregados a `docs/MOTOR_MEDICION.md` §2.2. Una fracción suelta impropia (`3/2`) se acepta; en la forma mixta la fracción debe ser propia; `1 - 1/2`, con espacios alrededor del guion, se rechaza.
 - Sigue: F1-T3.
+
+## 2026-11-19 · F1-T3 · Optimizador de cortes
+
+- Hecho: `lib/motor/medicion/cortes.dart` con `optimizarCortes` (primer ajuste decreciente con kerf y empalmes) y `PlanCortes`. Lo programó el implementador. El director leyó el código y el revisor lo comparó línea por línea con el oráculo, probando los bordes: no hay diferencias. El director agregó pruebas de esos bordes (ruido en el largo del tramo, doble exacto del tramo, kerf solo entre piezas, empates estables).
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 169 pruebas en verde; los 10 casos de `dorados/casos_cortes.json` coinciden; resultado determinista; oráculo `ok`.
+- Decisiones: entradas imposibles (tramo ≤ 0, kerf negativo, largo ≤ 0) dan `ArgumentError`, porque son errores de programación: las plantillas validan antes.
+- Sigue: F1-T4.

@@ -56,7 +56,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   Tabla de calibres como semilla y conversión de medidas en pulgadas. §2.2.
   *Hecho cuando:* `"1 1/2"`, `"1-1/2"`, `"1.5"`, `"3/4"` y `"2"` se convierten bien; lo inválido da error; calibre 14 → 1.905 mm; ida y vuelta de mm a texto en pulgadas para las medidas comerciales.
 
-- [ ] **F1-T3 · Optimizador de cortes** · I +R
+- [x] **F1-T3 · Optimizador de cortes** · I +R
   §5.
   *Hecho cuando:* pasan todos los casos de `dorados/casos_cortes.json`; el resultado es determinista.
 
