@@ -6,7 +6,7 @@ Cómo se reparte el trabajo entre modelos para gastar menos sin perder calidad. 
 
 | Papel | Modelo | Definición | Hace |
 |---|---|---|---|
-| **Director** | Fable (`fable`) | la sesión principal | decide, encarga, revisa y cierra |
+| **Director** | Opus (`opus`) | la sesión principal | decide, encarga, revisa y cierra |
 | **Implementador** | Sonnet (`sonnet`) | `.claude/agents/implementador.md` | pruebas y código de una tarea ya especificada |
 | **Mecánico** | Haiku (`haiku`) | `.claude/agents/mecanico.md` | trabajo repetitivo y de bajo riesgo |
 | **Revisor** | Sonnet (`sonnet`) | `.claude/agents/revisor.md` | lee un cambio contra la especificación; no edita |
@@ -104,7 +104,7 @@ Un reporte que dice "todo en verde" no cuenta como verificación. Cuenta el coma
 
 En `.claude/settings.json`:
 
-- `"model": "fable"` hace que la sesión principal arranque con Fable.
+- `"model": "opus"` hace que la sesión principal arranque con Opus.
 - `CLAUDE_CODE_SUBAGENT_MODEL=sonnet` hace que cualquier subagente sin modelo propio use Sonnet y no el modelo del director.
 
 Cada definición de `.claude/agents/` fija su modelo en la primera sección del archivo (`model:`). Para cambiar el reparto se edita ahí.

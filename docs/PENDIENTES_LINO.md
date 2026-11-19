@@ -6,7 +6,7 @@ Lo que solo tú puedes decidir o conseguir. El agente no se detiene por esto: us
 
 **P-01 · Nombre e identificador de la app** — antes de F0-T2
 Por defecto: nombre visible "Cotizador de herrería"; organización `mx.lino` (la app queda como `mx.lino.cotizador_herreria`). El identificador conviene decidirlo antes de instalar en el teléfono: cambiarlo después obliga a reinstalar y restaurar el respaldo.
-Respuesta:
+Respuesta: nombre visible **LinForge** (2026-11-19). Identificador: pendiente.
 
 **P-02 · Teléfono o tableta** — antes de la fase 4
 Por defecto: teléfono Android en vertical; debe verse bien también en tableta.

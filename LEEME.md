@@ -22,7 +22,7 @@ docs/
   MODELO_DE_DATOS.md      tablas, estados, instantáneas y respaldo
   VISUAL.md               plano, 3D, montaje sobre foto, PDF y render
   IA_Y_VOZ.md             voz, intérprete y proveedores
-  DIRECCION.md            cómo Fable dirige y delega a modelos más económicos
+  DIRECCION.md            cómo Opus dirige y delega a modelos más económicos
   GLOSARIO.md             palabras del oficio y su nombre en el código
   PENDIENTES_LINO.md      lo que solo tú decides (con valores por defecto)
   PROGRESO.md             bitácora que escribe la IA
@@ -45,7 +45,7 @@ En tu computadora necesitas Flutter, Git y, de preferencia, Python (solo para co
 
 1. Abre la carpeta del repositorio con Claude Code. Instalación: https://code.claude.com/docs/en/quickstart
 2. La primera vez te pedirá confiar en la carpeta y te mostrará los permisos de `.claude/settings.json`. Revísalos y acepta.
-3. El proyecto pide el modelo **Fable** para la sesión principal. Si no lo toma solo, escribe `/model fable`.
+3. El proyecto pide el modelo **Opus** para la sesión principal. Si no lo toma solo, escribe `/model opus`.
 4. Escribe:
 
 ```
@@ -67,11 +67,10 @@ Los subagentes y los permisos de `.claude/` son de Claude Code; con otra herrami
 
 ## Quién hace qué (y cuánto cuesta)
 
-- **Fable dirige**: elige la tarea, escribe el encargo, revisa y hace el commit.
+- **Opus dirige**: elige la tarea, escribe el encargo, revisa y hace el commit.
 - **Sonnet implementa y revisa**; **Haiku** hace lo mecánico y las búsquedas. Están definidos en `.claude/agents/` y cada uno trae su modelo fijo.
 - Las reglas del reparto están en `docs/DIRECCION.md`. Para cambiar qué modelo usa cada papel, edita la línea `model:` de su archivo.
-- Según la documentación de Claude Code, ningún plan usa Fable por defecto y su uso puede cobrarse a créditos de uso en lugar de al límite del plan; la primera vez te pide confirmación. Detalle: https://code.claude.com/docs/en/model-config
-- Si prefieres que la sesión principal no arranque en Fable, borra la línea `"model": "fable"` de `.claude/settings.json` y elige el modelo con `/model`.
+- Si prefieres otro modelo para la sesión principal, cambia la línea `"model": "opus"` de `.claude/settings.json` o elígelo con `/model`.
 - Para ver qué modelo está usando cada subagente: `/tasks`.
 
 Dos hábitos que ahorran: abre una sesión nueva al terminar cada bloque de trabajo (el contexto acumulado se paga en cada mensaje) y deja que avance varias tareas seguidas en lugar de pedirle cosas sueltas.

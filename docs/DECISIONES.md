@@ -50,3 +50,12 @@ La sesión principal decide, encarga y revisa; Sonnet implementa y revisa; Haiku
 
 **D-015 · 2026-11-13 · Las reglas viven en `AGENTS.md`; `CLAUDE.md` solo las importa.**
 Para que el proyecto funcione igual con cualquier agente de programación.
+
+**D-016 · 2026-11-19 · Opus dirige en lugar de Fable. Sustituye a D-014 en el modelo del director.**
+Lo decidió Lino. El reparto no cambia: Opus decide, encarga y revisa; Sonnet implementa y revisa; Haiku hace lo mecánico y las búsquedas.
+
+**D-017 · 2026-11-19 · El proyecto vive en la raíz del repositorio.**
+El kit estaba en la subcarpeta `cotizador-herreria/` y Claude Code no cargaba `.claude/` al abrir el repositorio. Se movió a la raíz con `git mv`, sin cambiar el contenido.
+
+**D-018 · 2026-11-19 · La app se llama LinForge.**
+Respuesta de Lino a P-01 (nombre visible). El identificador se fija antes de F0-T2.
