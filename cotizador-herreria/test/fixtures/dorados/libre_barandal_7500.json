@@ -1,0 +1,457 @@
+{
+  "id": "libre_barandal_7500",
+  "nombre": "Trabajo libre: barandal recto de 7.50 m capturado a mano",
+  "nota": "Caso dorado. Longitudes en mm, pesos en kg, areas en m2, dinero en pesos con 2 decimales.",
+  "tolerancias": {
+    "cantidad_abs": 1e-05,
+    "dinero": 0
+  },
+  "entrada": {
+    "plantilla": "libre",
+    "parametros": {
+      "ancho": 7500,
+      "alto": 900,
+      "piezas": [
+        {
+          "grupo": "pasamanos",
+          "articulo": "ptr-2x2-c14",
+          "largo": 7500,
+          "cantidad": 2,
+          "corte": "recto"
+        },
+        {
+          "grupo": "postes",
+          "articulo": "ptr-2x2-c14",
+          "largo": 900,
+          "cantidad": 6,
+          "corte": "recto"
+        },
+        {
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 798.4,
+          "cantidad": 40,
+          "corte": "recto"
+        }
+      ],
+      "paneles": [],
+      "herrajes": [],
+      "uniones": 92
+    },
+    "datos_trabajo": {
+      "con_instalacion": true,
+      "distancia_km": 8,
+      "lleva_motor": false
+    }
+  },
+  "esperado": {
+    "modelo": {
+      "plantilla": "libre",
+      "caja": {
+        "ancho": 7500,
+        "alto": 900
+      },
+      "num_hojas": 0,
+      "piezas": [
+        {
+          "id": "pieza-1",
+          "grupo": "pasamanos",
+          "articulo": "ptr-2x2-c14",
+          "largo": 7500,
+          "cantidad": 2,
+          "corte": "recto",
+          "p0": null,
+          "p1": null,
+          "hoja": null
+        },
+        {
+          "id": "pieza-2",
+          "grupo": "postes",
+          "articulo": "ptr-2x2-c14",
+          "largo": 900,
+          "cantidad": 6,
+          "corte": "recto",
+          "p0": null,
+          "p1": null,
+          "hoja": null
+        },
+        {
+          "id": "pieza-3",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 798.4,
+          "cantidad": 40,
+          "corte": "recto",
+          "p0": null,
+          "p1": null,
+          "hoja": null
+        }
+      ],
+      "paneles": [],
+      "herrajes": [],
+      "uniones": {
+        "manual": 92
+      },
+      "extras": {},
+      "detalle": {},
+      "advertencias": []
+    },
+    "despiece": [
+      {
+        "grupo": "pasamanos",
+        "articulo": "ptr-2x2-c14",
+        "largo": 7500,
+        "cantidad": 2,
+        "corte": "recto"
+      },
+      {
+        "grupo": "postes",
+        "articulo": "ptr-2x2-c14",
+        "largo": 900,
+        "cantidad": 6,
+        "corte": "recto"
+      },
+      {
+        "grupo": "barrotes",
+        "articulo": "tubular-1x1-c18",
+        "largo": 798.4,
+        "cantidad": 40,
+        "corte": "recto"
+      }
+    ],
+    "cortes": {
+      "ptr-2x2-c14": {
+        "tramos": 4,
+        "barras": [
+          [
+            6000.0
+          ],
+          [
+            6000.0
+          ],
+          [
+            1500,
+            1500,
+            900,
+            900,
+            900
+          ],
+          [
+            900,
+            900,
+            900
+          ]
+        ],
+        "sobrantes_mm": [
+          0.0,
+          0.0,
+          285,
+          3291
+        ],
+        "empalmes": 2
+      },
+      "tubular-1x1-c18": {
+        "tramos": 6,
+        "barras": [
+          [
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4
+          ],
+          [
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4
+          ],
+          [
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4
+          ],
+          [
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4
+          ],
+          [
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4
+          ],
+          [
+            798.4,
+            798.4,
+            798.4,
+            798.4,
+            798.4
+          ]
+        ],
+        "sobrantes_mm": [
+          390.2,
+          390.2,
+          390.2,
+          390.2,
+          390.2,
+          1993.0
+        ],
+        "empalmes": 0
+      }
+    },
+    "por_articulo": {
+      "ptr-2x2-c14": {
+        "tipo": "perfil",
+        "piezas": 8,
+        "metros": 20.4,
+        "kg": 59.664945,
+        "tramos": 4,
+        "m2": 0.0,
+        "hojas": 0,
+        "cantidad": 0,
+        "costo_compra": 2480.0,
+        "costo_usado": 2108.0
+      },
+      "tubular-1x1-c18": {
+        "tipo": "perfil",
+        "piezas": 40,
+        "metros": 31.936,
+        "kg": 29.558891,
+        "tramos": 6,
+        "m2": 0.0,
+        "hojas": 0,
+        "cantidad": 0,
+        "costo_compra": 1290.0,
+        "costo_usado": 1144.373333
+      }
+    },
+    "uniones": {
+      "manual": 92,
+      "empalmes": 2
+    },
+    "cantidades": {
+      "ancho_m": 7.5,
+      "alto_m": 0.9,
+      "largo_m": 7.5,
+      "area_m2": 6.75,
+      "perimetro_m": 16.8,
+      "num_hojas": 0,
+      "kg_acero": 89.223836,
+      "kg_perfiles": 89.223836,
+      "kg_laminas": 0.0,
+      "m_perfiles": 52.336,
+      "tramos": 10,
+      "m2_lamina": 0.0,
+      "hojas_lamina": 0,
+      "piezas": 48,
+      "paneles": 0,
+      "cortes": 48,
+      "ingletes": 0,
+      "uniones": 94,
+      "m2_pintura": 7.389978,
+      "costo_perfiles_compra": 3770.0,
+      "costo_perfiles_usado": 3252.373333,
+      "costo_laminas_compra": 0.0,
+      "costo_laminas_usado": 0.0,
+      "costo_herrajes": 0.0,
+      "costo_material_compra": 3770.0,
+      "costo_material_usado": 3252.373333
+    },
+    "advertencias": [
+      {
+        "codigo": "pieza_mayor_que_tramo",
+        "articulo": "ptr-2x2-c14"
+      }
+    ],
+    "evaluaciones": {
+      "despiece": {
+        "receta": "despiece",
+        "ajustes": {},
+        "lineas": [
+          {
+            "clave": "material",
+            "nombre": "Material",
+            "categoria": "material",
+            "valor": 3958.5,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "consumibles",
+            "nombre": "Consumibles",
+            "categoria": "material",
+            "valor": 535.34,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": false
+          },
+          {
+            "clave": "pintura",
+            "nombre": "Pintura y primario",
+            "categoria": "material",
+            "valor": 665.1,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "horas",
+            "nombre": "Horas estimadas",
+            "categoria": "auxiliar",
+            "valor": 11.594989,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "mano_obra",
+            "nombre": "Mano de obra",
+            "categoria": "mano_obra",
+            "valor": 1739.25,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "instalacion",
+            "nombre": "Instalacion",
+            "categoria": "extra",
+            "valor": 596.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "motor",
+            "nombre": "Motor",
+            "categoria": "extra",
+            "valor": 0.0,
+            "aplica": false,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "utilidad",
+            "nombre": "Utilidad",
+            "categoria": "utilidad",
+            "valor": 2248.26,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": false
+          },
+          {
+            "clave": "descuento",
+            "nombre": "Descuento",
+            "categoria": "descuento",
+            "valor": 0.0,
+            "aplica": false,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "iva",
+            "nombre": "IVA",
+            "categoria": "impuesto",
+            "valor": 0.0,
+            "aplica": false,
+            "origen": "formula",
+            "visible_cliente": true
+          }
+        ],
+        "agregados": {
+          "total_material": 5158.94,
+          "total_mano_obra": 1739.25,
+          "total_global": 0.0,
+          "total_extra": 596.0,
+          "total_utilidad": 2248.26,
+          "total_descuento": 0.0,
+          "total_impuesto": 0.0,
+          "costo_directo": 7494.19,
+          "subtotal": 9742.45,
+          "base_impuesto": 9742.45,
+          "suma": 9742.45
+        },
+        "suma": 9742.45,
+        "ajuste_redondeo": 7.55,
+        "total": 9750.0
+      },
+      "por_kilo": {
+        "receta": "por_kilo",
+        "ajustes": {},
+        "lineas": [
+          {
+            "clave": "acero",
+            "nombre": "Acero trabajado",
+            "categoria": "global",
+            "valor": 8476.26,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "herrajes",
+            "nombre": "Herrajes",
+            "categoria": "material",
+            "valor": 0.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "motor",
+            "nombre": "Motor",
+            "categoria": "extra",
+            "valor": 0.0,
+            "aplica": false,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "instalacion",
+            "nombre": "Instalacion",
+            "categoria": "extra",
+            "valor": 500.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          }
+        ],
+        "agregados": {
+          "total_material": 0.0,
+          "total_mano_obra": 0.0,
+          "total_global": 8476.26,
+          "total_extra": 500.0,
+          "total_utilidad": 0.0,
+          "total_descuento": 0.0,
+          "total_impuesto": 0.0,
+          "costo_directo": 8976.26,
+          "subtotal": 8976.26,
+          "base_impuesto": 8976.26,
+          "suma": 8976.26
+        },
+        "suma": 8976.26,
+        "ajuste_redondeo": 23.74,
+        "total": 9000.0
+      }
+    }
+  }
+}

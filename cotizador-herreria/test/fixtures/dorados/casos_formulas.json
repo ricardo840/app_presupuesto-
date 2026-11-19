@@ -1,0 +1,467 @@
+{
+  "nota": "Resultado esperado de cada formula. 'error' es el codigo; 'posicion' solo en errores de sintaxis.",
+  "tolerancia_abs": 1e-06,
+  "variables": {
+    "kg_acero": 98.5,
+    "area_m2": 6.6,
+    "uniones": 132,
+    "tarifa_hora": 150,
+    "merma": 0.05,
+    "cero": 0,
+    "con_instalacion": true,
+    "lleva_motor": false,
+    "tipo": "porton_abatible"
+  },
+  "articulos": {
+    "ptr-2x2-c14": {
+      "kg": 50.5,
+      "metros": 17.25,
+      "tramos": 3,
+      "m2": 0,
+      "hojas": 0,
+      "cantidad": 0,
+      "precio": 620
+    },
+    "lamina-c18": {
+      "kg": 25.6,
+      "metros": 0,
+      "tramos": 0,
+      "m2": 2.673,
+      "hojas": 1,
+      "cantidad": 0,
+      "precio": 1150
+    },
+    "bisagra-tejuelo": {
+      "kg": 0,
+      "metros": 0,
+      "tramos": 0,
+      "m2": 0,
+      "hojas": 0,
+      "cantidad": 6,
+      "precio": 85
+    },
+    "cuadrado-1-2": {
+      "kg": 0,
+      "metros": 0,
+      "tramos": 0,
+      "m2": 0,
+      "hojas": 0,
+      "cantidad": 0,
+      "precio": 240
+    }
+  },
+  "casos": [
+    {
+      "formula": "1 + 2 * 3",
+      "esperado": 7.0
+    },
+    {
+      "formula": "(1 + 2) * 3",
+      "esperado": 9.0
+    },
+    {
+      "formula": "10 / 4",
+      "esperado": 2.5
+    },
+    {
+      "formula": "10 - 4 - 3",
+      "esperado": 3.0
+    },
+    {
+      "formula": "100 / 10 / 5",
+      "esperado": 2.0
+    },
+    {
+      "formula": "-3 + 5",
+      "esperado": 2.0
+    },
+    {
+      "formula": "2 * -3",
+      "esperado": -6.0
+    },
+    {
+      "formula": "--4",
+      "esperado": 4.0
+    },
+    {
+      "formula": "  7  ",
+      "esperado": 7.0
+    },
+    {
+      "formula": "0.1 + 0.2",
+      "esperado": 0.3
+    },
+    {
+      "formula": "30%",
+      "esperado": 0.3
+    },
+    {
+      "formula": "200 * 15%",
+      "esperado": 30.0
+    },
+    {
+      "formula": "1200 * (1 + 5%)",
+      "esperado": 1260.0
+    },
+    {
+      "formula": "kg_acero * 95",
+      "esperado": 9357.5
+    },
+    {
+      "formula": "area_m2 * 1850 + 500",
+      "esperado": 12710.0
+    },
+    {
+      "formula": "kg_acero * (1 + merma)",
+      "esperado": 103.425
+    },
+    {
+      "formula": "uniones * 3 / 60 * tarifa_hora",
+      "esperado": 990.0
+    },
+    {
+      "formula": "5 > 3",
+      "esperado": true
+    },
+    {
+      "formula": "5 >= 5",
+      "esperado": true
+    },
+    {
+      "formula": "2 < 1",
+      "esperado": false
+    },
+    {
+      "formula": "2 <= 1",
+      "esperado": false
+    },
+    {
+      "formula": "3 == 3",
+      "esperado": true
+    },
+    {
+      "formula": "3 != 3",
+      "esperado": false
+    },
+    {
+      "formula": "tipo == \"porton_abatible\"",
+      "esperado": true
+    },
+    {
+      "formula": "tipo != 'reja_ventana'",
+      "esperado": true
+    },
+    {
+      "formula": "con_instalacion == verdadero",
+      "esperado": true
+    },
+    {
+      "formula": "!lleva_motor",
+      "esperado": true
+    },
+    {
+      "formula": "con_instalacion && lleva_motor",
+      "esperado": false
+    },
+    {
+      "formula": "con_instalacion || lleva_motor",
+      "esperado": true
+    },
+    {
+      "formula": "1 < 2 && 2 < 3",
+      "esperado": true
+    },
+    {
+      "formula": "1 + 1 == 2 || falso",
+      "esperado": true
+    },
+    {
+      "formula": "falso && (1 / cero > 1)",
+      "esperado": false
+    },
+    {
+      "formula": "verdadero || (1 / cero > 1)",
+      "esperado": true
+    },
+    {
+      "formula": "si(5 > 3, 10, 20)",
+      "esperado": 10.0
+    },
+    {
+      "formula": "si(lleva_motor, 9500, 0)",
+      "esperado": 0.0
+    },
+    {
+      "formula": "si(falso, 1 / cero, 7)",
+      "esperado": 7.0
+    },
+    {
+      "formula": "si(cero != 0, kg_acero / cero, 0)",
+      "esperado": 0.0
+    },
+    {
+      "formula": "si(tipo == \"porton_abatible\", 1850, 1100) * area_m2",
+      "esperado": 12210.0
+    },
+    {
+      "formula": "min(3, 1, 2)",
+      "esperado": 1.0
+    },
+    {
+      "formula": "max(3, 1, 2)",
+      "esperado": 3.0
+    },
+    {
+      "formula": "max(kg_acero * 95, 2500)",
+      "esperado": 9357.5
+    },
+    {
+      "formula": "abs(-2.5)",
+      "esperado": 2.5
+    },
+    {
+      "formula": "redondear(2.5)",
+      "esperado": 3.0
+    },
+    {
+      "formula": "redondear(-2.5)",
+      "esperado": -3.0
+    },
+    {
+      "formula": "redondear(1.005, 2)",
+      "esperado": 1.01
+    },
+    {
+      "formula": "redondear(2.345, 2)",
+      "esperado": 2.35
+    },
+    {
+      "formula": "redondear(1234.5678, 1)",
+      "esperado": 1234.6
+    },
+    {
+      "formula": "techo(2.1)",
+      "esperado": 3.0
+    },
+    {
+      "formula": "techo(2.0000000001)",
+      "esperado": 2.0
+    },
+    {
+      "formula": "techo(-2.5)",
+      "esperado": -2.0
+    },
+    {
+      "formula": "piso(2.9)",
+      "esperado": 2.0
+    },
+    {
+      "formula": "piso(2.9999999999)",
+      "esperado": 3.0
+    },
+    {
+      "formula": "multiplo_arriba(1234, 50)",
+      "esperado": 1250.0
+    },
+    {
+      "formula": "multiplo_arriba(1250, 50)",
+      "esperado": 1250.0
+    },
+    {
+      "formula": "multiplo_abajo(1249, 50)",
+      "esperado": 1200.0
+    },
+    {
+      "formula": "multiplo_cercano(1224, 50)",
+      "esperado": 1200.0
+    },
+    {
+      "formula": "multiplo_cercano(1225, 50)",
+      "esperado": 1250.0
+    },
+    {
+      "formula": "art_kg(\"ptr-2x2-c14\") * 2",
+      "esperado": 101.0
+    },
+    {
+      "formula": "art_tramos(\"ptr-2x2-c14\") * art_precio(\"ptr-2x2-c14\")",
+      "esperado": 1860.0
+    },
+    {
+      "formula": "art_metros(\"ptr-2x2-c14\")",
+      "esperado": 17.25
+    },
+    {
+      "formula": "art_m2(\"lamina-c18\") + art_hojas(\"lamina-c18\")",
+      "esperado": 3.673
+    },
+    {
+      "formula": "art_cantidad(\"bisagra-tejuelo\") * art_precio(\"bisagra-tejuelo\")",
+      "esperado": 510.0
+    },
+    {
+      "formula": "art_kg(\"cuadrado-1-2\")",
+      "esperado": 0.0
+    },
+    {
+      "formula": "1 +",
+      "error": "sintaxis",
+      "posicion": 3
+    },
+    {
+      "formula": "2 * (3 + 4",
+      "error": "sintaxis",
+      "posicion": 10
+    },
+    {
+      "formula": "2 * 3)",
+      "error": "sintaxis",
+      "posicion": 5
+    },
+    {
+      "formula": "",
+      "error": "sintaxis",
+      "posicion": 0
+    },
+    {
+      "formula": "1,5 + 2",
+      "error": "sintaxis",
+      "posicion": 1
+    },
+    {
+      "formula": "3 < 4 < 5",
+      "error": "sintaxis",
+      "posicion": 6
+    },
+    {
+      "formula": "5 %",
+      "error": "sintaxis",
+      "posicion": 2
+    },
+    {
+      "formula": "(5 + 5)%",
+      "error": "sintaxis",
+      "posicion": 7
+    },
+    {
+      "formula": ".5 + 1",
+      "error": "sintaxis",
+      "posicion": 0
+    },
+    {
+      "formula": "1. + 2",
+      "error": "sintaxis",
+      "posicion": 1
+    },
+    {
+      "formula": "2 $ 3",
+      "error": "sintaxis",
+      "posicion": 2
+    },
+    {
+      "formula": "año + 1",
+      "error": "sintaxis",
+      "posicion": 1
+    },
+    {
+      "formula": "\"sin cerrar",
+      "error": "sintaxis",
+      "posicion": 0
+    },
+    {
+      "formula": "3 = 3",
+      "error": "sintaxis",
+      "posicion": 2
+    },
+    {
+      "formula": "1 & 2",
+      "error": "sintaxis",
+      "posicion": 2
+    },
+    {
+      "formula": "min(1, 2,)",
+      "error": "sintaxis",
+      "posicion": 9
+    },
+    {
+      "formula": "desconocida + 1",
+      "error": "variable_desconocida"
+    },
+    {
+      "formula": "1 / 0",
+      "error": "division_entre_cero"
+    },
+    {
+      "formula": "kg_acero / cero",
+      "error": "division_entre_cero"
+    },
+    {
+      "formula": "1 + verdadero",
+      "error": "tipo"
+    },
+    {
+      "formula": "\"a\" + 1",
+      "error": "tipo"
+    },
+    {
+      "formula": "si(1, 2, 3)",
+      "error": "tipo"
+    },
+    {
+      "formula": "1 == verdadero",
+      "error": "tipo"
+    },
+    {
+      "formula": "!5",
+      "error": "tipo"
+    },
+    {
+      "formula": "-verdadero",
+      "error": "tipo"
+    },
+    {
+      "formula": "1 && verdadero",
+      "error": "tipo"
+    },
+    {
+      "formula": "\"a\" < \"b\"",
+      "error": "tipo"
+    },
+    {
+      "formula": "min(1)",
+      "error": "argumentos"
+    },
+    {
+      "formula": "si(verdadero, 1)",
+      "error": "argumentos"
+    },
+    {
+      "formula": "abs(1, 2)",
+      "error": "argumentos"
+    },
+    {
+      "formula": "foo(1)",
+      "error": "funcion_desconocida"
+    },
+    {
+      "formula": "redondear(2.5, 1.5)",
+      "error": "argumentos"
+    },
+    {
+      "formula": "redondear(2.5, 9)",
+      "error": "argumentos"
+    },
+    {
+      "formula": "multiplo_arriba(10, 0)",
+      "error": "argumentos"
+    },
+    {
+      "formula": "art_kg(5)",
+      "error": "tipo"
+    },
+    {
+      "formula": "art_kg(\"no-existe\")",
+      "error": "articulo_desconocido"
+    }
+  ]
+}

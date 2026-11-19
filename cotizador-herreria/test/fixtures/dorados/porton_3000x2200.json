@@ -1,0 +1,1471 @@
+{
+  "id": "porton_3000x2200",
+  "nombre": "Porton abatible de 2 hojas 3.00 x 2.20 m",
+  "nota": "Caso dorado. Longitudes en mm, pesos en kg, areas en m2, dinero en pesos con 2 decimales.",
+  "tolerancias": {
+    "cantidad_abs": 1e-05,
+    "dinero": 0
+  },
+  "entrada": {
+    "plantilla": "porton_abatible",
+    "parametros": {
+      "ancho": 3000,
+      "alto": 2200,
+      "hojas": 2,
+      "holgura_lateral": 10,
+      "holgura_central": 10,
+      "holgura_piso": 50,
+      "bastidor": "ptr-2x2-c14",
+      "relleno": "mixto",
+      "barrote": "tubular-1x1-c18",
+      "separacion_max": 110,
+      "lamina": "lamina-c18",
+      "alto_zoclo": 900,
+      "travesano": "ptr-2x2-c14",
+      "paso_punteo": 150,
+      "bisagra": "bisagra-tejuelo",
+      "pasador": "pasador-portacandado",
+      "picaporte": "picaporte-piso"
+    },
+    "datos_trabajo": {
+      "con_instalacion": true,
+      "distancia_km": 15,
+      "lleva_motor": true
+    }
+  },
+  "esperado": {
+    "modelo": {
+      "plantilla": "porton_abatible",
+      "caja": {
+        "ancho": 3000,
+        "alto": 2200
+      },
+      "num_hojas": 2,
+      "piezas": [
+        {
+          "id": "h1-bastidor-izq",
+          "grupo": "bastidor",
+          "articulo": "ptr-2x2-c14",
+          "largo": 2150,
+          "cantidad": 1,
+          "corte": "inglete",
+          "p0": [
+            35.4,
+            50,
+            0
+          ],
+          "p1": [
+            35.4,
+            2200,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-bastidor-der",
+          "grupo": "bastidor",
+          "articulo": "ptr-2x2-c14",
+          "largo": 2150,
+          "cantidad": 1,
+          "corte": "inglete",
+          "p0": [
+            1469.6,
+            50,
+            0
+          ],
+          "p1": [
+            1469.6,
+            2200,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-bastidor-inf",
+          "grupo": "bastidor",
+          "articulo": "ptr-2x2-c14",
+          "largo": 1485.0,
+          "cantidad": 1,
+          "corte": "inglete",
+          "p0": [
+            10.0,
+            75.4,
+            0
+          ],
+          "p1": [
+            1495.0,
+            75.4,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-bastidor-sup",
+          "grupo": "bastidor",
+          "articulo": "ptr-2x2-c14",
+          "largo": 1485.0,
+          "cantidad": 1,
+          "corte": "inglete",
+          "p0": [
+            10.0,
+            2174.6,
+            0
+          ],
+          "p1": [
+            1495.0,
+            2174.6,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-travesano",
+          "grupo": "travesanos",
+          "articulo": "ptr-2x2-c14",
+          "largo": 1383.4,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            60.8,
+            950,
+            0
+          ],
+          "p1": [
+            1444.2,
+            950,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-1",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            176.172727,
+            975.4,
+            0
+          ],
+          "p1": [
+            176.172727,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-2",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            304.245455,
+            975.4,
+            0
+          ],
+          "p1": [
+            304.245455,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-3",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            432.318182,
+            975.4,
+            0
+          ],
+          "p1": [
+            432.318182,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-4",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            560.390909,
+            975.4,
+            0
+          ],
+          "p1": [
+            560.390909,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-5",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            688.463636,
+            975.4,
+            0
+          ],
+          "p1": [
+            688.463636,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-6",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            816.536364,
+            975.4,
+            0
+          ],
+          "p1": [
+            816.536364,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-7",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            944.609091,
+            975.4,
+            0
+          ],
+          "p1": [
+            944.609091,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-8",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            1072.681818,
+            975.4,
+            0
+          ],
+          "p1": [
+            1072.681818,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-9",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            1200.754545,
+            975.4,
+            0
+          ],
+          "p1": [
+            1200.754545,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h1-barrote-10",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            1328.827273,
+            975.4,
+            0
+          ],
+          "p1": [
+            1328.827273,
+            2149.2,
+            0
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h2-bastidor-izq",
+          "grupo": "bastidor",
+          "articulo": "ptr-2x2-c14",
+          "largo": 2150,
+          "cantidad": 1,
+          "corte": "inglete",
+          "p0": [
+            1530.4,
+            50,
+            0
+          ],
+          "p1": [
+            1530.4,
+            2200,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-bastidor-der",
+          "grupo": "bastidor",
+          "articulo": "ptr-2x2-c14",
+          "largo": 2150,
+          "cantidad": 1,
+          "corte": "inglete",
+          "p0": [
+            2964.6,
+            50,
+            0
+          ],
+          "p1": [
+            2964.6,
+            2200,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-bastidor-inf",
+          "grupo": "bastidor",
+          "articulo": "ptr-2x2-c14",
+          "largo": 1485.0,
+          "cantidad": 1,
+          "corte": "inglete",
+          "p0": [
+            1505.0,
+            75.4,
+            0
+          ],
+          "p1": [
+            2990.0,
+            75.4,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-bastidor-sup",
+          "grupo": "bastidor",
+          "articulo": "ptr-2x2-c14",
+          "largo": 1485.0,
+          "cantidad": 1,
+          "corte": "inglete",
+          "p0": [
+            1505.0,
+            2174.6,
+            0
+          ],
+          "p1": [
+            2990.0,
+            2174.6,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-travesano",
+          "grupo": "travesanos",
+          "articulo": "ptr-2x2-c14",
+          "largo": 1383.4,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            1555.8,
+            950,
+            0
+          ],
+          "p1": [
+            2939.2,
+            950,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-1",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            1671.172727,
+            975.4,
+            0
+          ],
+          "p1": [
+            1671.172727,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-2",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            1799.245455,
+            975.4,
+            0
+          ],
+          "p1": [
+            1799.245455,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-3",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            1927.318182,
+            975.4,
+            0
+          ],
+          "p1": [
+            1927.318182,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-4",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            2055.390909,
+            975.4,
+            0
+          ],
+          "p1": [
+            2055.390909,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-5",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            2183.463636,
+            975.4,
+            0
+          ],
+          "p1": [
+            2183.463636,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-6",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            2311.536364,
+            975.4,
+            0
+          ],
+          "p1": [
+            2311.536364,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-7",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            2439.609091,
+            975.4,
+            0
+          ],
+          "p1": [
+            2439.609091,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-8",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            2567.681818,
+            975.4,
+            0
+          ],
+          "p1": [
+            2567.681818,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-9",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            2695.754545,
+            975.4,
+            0
+          ],
+          "p1": [
+            2695.754545,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        },
+        {
+          "id": "h2-barrote-10",
+          "grupo": "barrotes",
+          "articulo": "tubular-1x1-c18",
+          "largo": 1173.8,
+          "cantidad": 1,
+          "corte": "recto",
+          "p0": [
+            2823.827273,
+            975.4,
+            0
+          ],
+          "p1": [
+            2823.827273,
+            2149.2,
+            0
+          ],
+          "hoja": 1
+        }
+      ],
+      "paneles": [
+        {
+          "id": "h1-zoclo",
+          "grupo": "zoclo",
+          "articulo": "lamina-c18",
+          "ancho": 1485.0,
+          "alto": 900,
+          "cantidad": 1,
+          "origen": [
+            10.0,
+            50,
+            26.0095
+          ],
+          "hoja": 0
+        },
+        {
+          "id": "h2-zoclo",
+          "grupo": "zoclo",
+          "articulo": "lamina-c18",
+          "ancho": 1485.0,
+          "alto": 900,
+          "cantidad": 1,
+          "origen": [
+            1505.0,
+            50,
+            26.0095
+          ],
+          "hoja": 1
+        }
+      ],
+      "herrajes": [
+        {
+          "articulo": "bisagra-tejuelo",
+          "cantidad": 6
+        },
+        {
+          "articulo": "pasador-portacandado",
+          "cantidad": 1
+        },
+        {
+          "articulo": "picaporte-piso",
+          "cantidad": 1
+        }
+      ],
+      "uniones": {
+        "bastidor": 8,
+        "travesanos": 4,
+        "barrotes": 40,
+        "lamina": 64,
+        "bisagras": 12,
+        "pasador": 2,
+        "picaporte": 2
+      },
+      "extras": {
+        "barrotes": 20,
+        "bisagras": 6
+      },
+      "detalle": {
+        "ancho_hoja_mm": 1485.0,
+        "alto_hoja_mm": 2150,
+        "claro_ancho_mm": 1383.4,
+        "hueco_libre_mm": 102.672727,
+        "barrotes_por_hoja": 10,
+        "largo_barrote_mm": 1173.8,
+        "puntos_lamina_por_hoja": 32
+      },
+      "advertencias": []
+    },
+    "despiece": [
+      {
+        "grupo": "bastidor",
+        "articulo": "ptr-2x2-c14",
+        "largo": 2150,
+        "cantidad": 4,
+        "corte": "inglete"
+      },
+      {
+        "grupo": "bastidor",
+        "articulo": "ptr-2x2-c14",
+        "largo": 1485.0,
+        "cantidad": 4,
+        "corte": "inglete"
+      },
+      {
+        "grupo": "travesanos",
+        "articulo": "ptr-2x2-c14",
+        "largo": 1383.4,
+        "cantidad": 2,
+        "corte": "recto"
+      },
+      {
+        "grupo": "barrotes",
+        "articulo": "tubular-1x1-c18",
+        "largo": 1173.8,
+        "cantidad": 20,
+        "corte": "recto"
+      }
+    ],
+    "cortes": {
+      "ptr-2x2-c14": {
+        "tramos": 3,
+        "barras": [
+          [
+            2150,
+            2150,
+            1485.0
+          ],
+          [
+            2150,
+            2150,
+            1485.0
+          ],
+          [
+            1485.0,
+            1485.0,
+            1383.4,
+            1383.4
+          ]
+        ],
+        "sobrantes_mm": [
+          206.0,
+          206.0,
+          251.2
+        ],
+        "empalmes": 0
+      },
+      "tubular-1x1-c18": {
+        "tramos": 4,
+        "barras": [
+          [
+            1173.8,
+            1173.8,
+            1173.8,
+            1173.8,
+            1173.8
+          ],
+          [
+            1173.8,
+            1173.8,
+            1173.8,
+            1173.8,
+            1173.8
+          ],
+          [
+            1173.8,
+            1173.8,
+            1173.8,
+            1173.8,
+            1173.8
+          ],
+          [
+            1173.8,
+            1173.8,
+            1173.8,
+            1173.8,
+            1173.8
+          ]
+        ],
+        "sobrantes_mm": [
+          116.0,
+          116.0,
+          116.0,
+          116.0
+        ],
+        "empalmes": 0
+      }
+    },
+    "por_articulo": {
+      "ptr-2x2-c14": {
+        "tipo": "perfil",
+        "piezas": 10,
+        "metros": 17.3068,
+        "kg": 50.618102,
+        "tramos": 3,
+        "m2": 0.0,
+        "hojas": 0,
+        "cantidad": 0,
+        "costo_compra": 1860.0,
+        "costo_usado": 1788.369333
+      },
+      "tubular-1x1-c18": {
+        "tipo": "perfil",
+        "piezas": 20,
+        "metros": 23.476,
+        "kg": 21.728598,
+        "tramos": 4,
+        "m2": 0.0,
+        "hojas": 0,
+        "cantidad": 0,
+        "costo_compra": 860.0,
+        "costo_usado": 841.223333
+      },
+      "lamina-c18": {
+        "tipo": "lamina",
+        "piezas": 0,
+        "metros": 0.0,
+        "kg": 25.578338,
+        "tramos": 0,
+        "m2": 2.673,
+        "hojas": 1,
+        "cantidad": 0,
+        "costo_compra": 1150.0,
+        "costo_usado": 827.328777
+      },
+      "bisagra-tejuelo": {
+        "tipo": "herraje",
+        "piezas": 0,
+        "metros": 0.0,
+        "kg": 0.0,
+        "tramos": 0,
+        "m2": 0.0,
+        "hojas": 0,
+        "cantidad": 6,
+        "costo_compra": 510.0,
+        "costo_usado": 510.0
+      },
+      "pasador-portacandado": {
+        "tipo": "herraje",
+        "piezas": 0,
+        "metros": 0.0,
+        "kg": 0.0,
+        "tramos": 0,
+        "m2": 0.0,
+        "hojas": 0,
+        "cantidad": 1,
+        "costo_compra": 120.0,
+        "costo_usado": 120.0
+      },
+      "picaporte-piso": {
+        "tipo": "herraje",
+        "piezas": 0,
+        "metros": 0.0,
+        "kg": 0.0,
+        "tramos": 0,
+        "m2": 0.0,
+        "hojas": 0,
+        "cantidad": 1,
+        "costo_compra": 95.0,
+        "costo_usado": 95.0
+      }
+    },
+    "uniones": {
+      "bastidor": 8,
+      "travesanos": 4,
+      "barrotes": 40,
+      "lamina": 64,
+      "bisagras": 12,
+      "pasador": 2,
+      "picaporte": 2
+    },
+    "cantidades": {
+      "ancho_m": 3.0,
+      "alto_m": 2.2,
+      "largo_m": 3.0,
+      "area_m2": 6.6,
+      "perimetro_m": 10.4,
+      "num_hojas": 2,
+      "kg_acero": 97.925038,
+      "kg_perfiles": 72.3467,
+      "kg_laminas": 25.578338,
+      "m_perfiles": 40.7828,
+      "tramos": 7,
+      "m2_lamina": 2.673,
+      "hojas_lamina": 1,
+      "piezas": 30,
+      "paneles": 2,
+      "cortes": 30,
+      "ingletes": 16,
+      "uniones": 132,
+      "m2_pintura": 11.247903,
+      "costo_perfiles_compra": 2720.0,
+      "costo_perfiles_usado": 2629.592667,
+      "costo_laminas_compra": 1150.0,
+      "costo_laminas_usado": 827.328777,
+      "costo_herrajes": 725.0,
+      "costo_material_compra": 4595.0,
+      "costo_material_usado": 4181.921444,
+      "x_barrotes": 20,
+      "x_bisagras": 6
+    },
+    "advertencias": [],
+    "evaluaciones": {
+      "despiece": {
+        "receta": "despiece",
+        "ajustes": {},
+        "lineas": [
+          {
+            "clave": "material",
+            "nombre": "Material",
+            "categoria": "material",
+            "valor": 4824.75,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "consumibles",
+            "nombre": "Consumibles",
+            "categoria": "material",
+            "valor": 587.55,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": false
+          },
+          {
+            "clave": "pintura",
+            "nombre": "Pintura y primario",
+            "categoria": "material",
+            "valor": 1012.31,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "horas",
+            "nombre": "Horas estimadas",
+            "categoria": "auxiliar",
+            "valor": 14.223952,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "mano_obra",
+            "nombre": "Mano de obra",
+            "categoria": "mano_obra",
+            "valor": 2133.59,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "instalacion",
+            "nombre": "Instalacion",
+            "categoria": "extra",
+            "valor": 680.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "motor",
+            "nombre": "Motor",
+            "categoria": "extra",
+            "valor": 9500.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "utilidad",
+            "nombre": "Utilidad",
+            "categoria": "utilidad",
+            "valor": 5621.46,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": false
+          },
+          {
+            "clave": "descuento",
+            "nombre": "Descuento",
+            "categoria": "descuento",
+            "valor": 0.0,
+            "aplica": false,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "iva",
+            "nombre": "IVA",
+            "categoria": "impuesto",
+            "valor": 0.0,
+            "aplica": false,
+            "origen": "formula",
+            "visible_cliente": true
+          }
+        ],
+        "agregados": {
+          "total_material": 6424.61,
+          "total_mano_obra": 2133.59,
+          "total_global": 0.0,
+          "total_extra": 10180.0,
+          "total_utilidad": 5621.46,
+          "total_descuento": 0.0,
+          "total_impuesto": 0.0,
+          "costo_directo": 18738.2,
+          "subtotal": 24359.66,
+          "base_impuesto": 24359.66,
+          "suma": 24359.66
+        },
+        "suma": 24359.66,
+        "ajuste_redondeo": 40.34,
+        "total": 24400.0
+      },
+      "despiece_iva_descuento": {
+        "receta": "despiece",
+        "ajustes": {
+          "parametros": {
+            "con_iva": true,
+            "pct_descuento": 0.05
+          }
+        },
+        "lineas": [
+          {
+            "clave": "material",
+            "nombre": "Material",
+            "categoria": "material",
+            "valor": 4824.75,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "consumibles",
+            "nombre": "Consumibles",
+            "categoria": "material",
+            "valor": 587.55,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": false
+          },
+          {
+            "clave": "pintura",
+            "nombre": "Pintura y primario",
+            "categoria": "material",
+            "valor": 1012.31,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "horas",
+            "nombre": "Horas estimadas",
+            "categoria": "auxiliar",
+            "valor": 14.223952,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "mano_obra",
+            "nombre": "Mano de obra",
+            "categoria": "mano_obra",
+            "valor": 2133.59,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "instalacion",
+            "nombre": "Instalacion",
+            "categoria": "extra",
+            "valor": 680.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "motor",
+            "nombre": "Motor",
+            "categoria": "extra",
+            "valor": 9500.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "utilidad",
+            "nombre": "Utilidad",
+            "categoria": "utilidad",
+            "valor": 5621.46,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": false
+          },
+          {
+            "clave": "descuento",
+            "nombre": "Descuento",
+            "categoria": "descuento",
+            "valor": -1217.98,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "iva",
+            "nombre": "IVA",
+            "categoria": "impuesto",
+            "valor": 3702.67,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          }
+        ],
+        "agregados": {
+          "total_material": 6424.61,
+          "total_mano_obra": 2133.59,
+          "total_global": 0.0,
+          "total_extra": 10180.0,
+          "total_utilidad": 5621.46,
+          "total_descuento": -1217.98,
+          "total_impuesto": 3702.67,
+          "costo_directo": 18738.2,
+          "subtotal": 24359.66,
+          "base_impuesto": 23141.68,
+          "suma": 26844.35
+        },
+        "suma": 26844.35,
+        "ajuste_redondeo": 5.65,
+        "total": 26850.0,
+        "presentaciones": {
+          "total": {
+            "modo": "total",
+            "items": [],
+            "impuesto": 3703.45,
+            "total": 26850.0
+          },
+          "categorias": {
+            "modo": "categorias",
+            "items": [
+              {
+                "nombre": "Materiales",
+                "valor": 7835.38
+              },
+              {
+                "nombre": "Mano de obra",
+                "valor": 2864.02
+              },
+              {
+                "nombre": "Extras",
+                "valor": 13665.13
+              },
+              {
+                "nombre": "Descuento",
+                "valor": -1217.98
+              }
+            ],
+            "impuesto": 3703.45,
+            "total": 26850.0
+          },
+          "conceptos": {
+            "modo": "conceptos",
+            "items": [
+              {
+                "nombre": "Material",
+                "valor": 6476.5
+              },
+              {
+                "nombre": "Pintura y primario",
+                "valor": 1358.87
+              },
+              {
+                "nombre": "Mano de obra",
+                "valor": 2864.03
+              },
+              {
+                "nombre": "Instalacion",
+                "valor": 912.8
+              },
+              {
+                "nombre": "Motor",
+                "valor": 12752.33
+              },
+              {
+                "nombre": "Descuento",
+                "valor": -1217.98
+              }
+            ],
+            "impuesto": 3703.45,
+            "total": 26850.0
+          }
+        }
+      },
+      "despiece_ajustes_manuales": {
+        "receta": "despiece",
+        "ajustes": {
+          "lineas_fijas": {
+            "mano_obra": 3000.0
+          },
+          "lineas_extra": [
+            {
+              "clave": "retiro",
+              "nombre": "Retiro del porton viejo",
+              "categoria": "extra",
+              "valor": 400.0
+            }
+          ]
+        },
+        "lineas": [
+          {
+            "clave": "material",
+            "nombre": "Material",
+            "categoria": "material",
+            "valor": 4824.75,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "consumibles",
+            "nombre": "Consumibles",
+            "categoria": "material",
+            "valor": 587.55,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": false
+          },
+          {
+            "clave": "pintura",
+            "nombre": "Pintura y primario",
+            "categoria": "material",
+            "valor": 1012.31,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "horas",
+            "nombre": "Horas estimadas",
+            "categoria": "auxiliar",
+            "valor": 14.223952,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "mano_obra",
+            "nombre": "Mano de obra",
+            "categoria": "mano_obra",
+            "valor": 3000.0,
+            "aplica": true,
+            "origen": "fijo",
+            "visible_cliente": true
+          },
+          {
+            "clave": "instalacion",
+            "nombre": "Instalacion",
+            "categoria": "extra",
+            "valor": 680.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "motor",
+            "nombre": "Motor",
+            "categoria": "extra",
+            "valor": 9500.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "utilidad",
+            "nombre": "Utilidad",
+            "categoria": "utilidad",
+            "valor": 6001.38,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": false
+          },
+          {
+            "clave": "descuento",
+            "nombre": "Descuento",
+            "categoria": "descuento",
+            "valor": 0.0,
+            "aplica": false,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "iva",
+            "nombre": "IVA",
+            "categoria": "impuesto",
+            "valor": 0.0,
+            "aplica": false,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "retiro",
+            "nombre": "Retiro del porton viejo",
+            "categoria": "extra",
+            "valor": 400.0,
+            "aplica": true,
+            "origen": "extra",
+            "visible_cliente": true
+          }
+        ],
+        "agregados": {
+          "total_material": 6424.61,
+          "total_mano_obra": 3000.0,
+          "total_global": 0.0,
+          "total_extra": 10580.0,
+          "total_utilidad": 6001.38,
+          "total_descuento": 0.0,
+          "total_impuesto": 0.0,
+          "costo_directo": 20004.61,
+          "subtotal": 26005.99,
+          "base_impuesto": 26005.99,
+          "suma": 26005.99
+        },
+        "suma": 26005.99,
+        "ajuste_redondeo": 44.01,
+        "total": 26050.0
+      },
+      "por_m2": {
+        "receta": "por_m2",
+        "ajustes": {},
+        "lineas": [
+          {
+            "clave": "trabajo",
+            "nombre": "Trabajo de herreria",
+            "categoria": "global",
+            "valor": 12210.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "instalacion",
+            "nombre": "Instalacion",
+            "categoria": "extra",
+            "valor": 500.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          }
+        ],
+        "agregados": {
+          "total_material": 0.0,
+          "total_mano_obra": 0.0,
+          "total_global": 12210.0,
+          "total_extra": 500.0,
+          "total_utilidad": 0.0,
+          "total_descuento": 0.0,
+          "total_impuesto": 0.0,
+          "costo_directo": 12710.0,
+          "subtotal": 12710.0,
+          "base_impuesto": 12710.0,
+          "suma": 12710.0
+        },
+        "suma": 12710.0,
+        "ajuste_redondeo": 0.0,
+        "total": 12710.0
+      },
+      "por_kilo": {
+        "receta": "por_kilo",
+        "ajustes": {},
+        "lineas": [
+          {
+            "clave": "acero",
+            "nombre": "Acero trabajado",
+            "categoria": "global",
+            "valor": 9302.88,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "herrajes",
+            "nombre": "Herrajes",
+            "categoria": "material",
+            "valor": 725.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "motor",
+            "nombre": "Motor",
+            "categoria": "extra",
+            "valor": 9500.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "instalacion",
+            "nombre": "Instalacion",
+            "categoria": "extra",
+            "valor": 500.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          }
+        ],
+        "agregados": {
+          "total_material": 725.0,
+          "total_mano_obra": 0.0,
+          "total_global": 9302.88,
+          "total_extra": 10000.0,
+          "total_utilidad": 0.0,
+          "total_descuento": 0.0,
+          "total_impuesto": 0.0,
+          "costo_directo": 20027.88,
+          "subtotal": 20027.88,
+          "base_impuesto": 20027.88,
+          "suma": 20027.88
+        },
+        "suma": 20027.88,
+        "ajuste_redondeo": 72.12,
+        "total": 20100.0
+      },
+      "material_por_factor": {
+        "receta": "material_por_factor",
+        "ajustes": {},
+        "lineas": [
+          {
+            "clave": "material",
+            "nombre": "Material",
+            "categoria": "material",
+            "valor": 4595.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "trabajo",
+            "nombre": "Mano de obra y utilidad",
+            "categoria": "global",
+            "valor": 5514.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          },
+          {
+            "clave": "instalacion",
+            "nombre": "Instalacion",
+            "categoria": "extra",
+            "valor": 500.0,
+            "aplica": true,
+            "origen": "formula",
+            "visible_cliente": true
+          }
+        ],
+        "agregados": {
+          "total_material": 4595.0,
+          "total_mano_obra": 0.0,
+          "total_global": 5514.0,
+          "total_extra": 500.0,
+          "total_utilidad": 0.0,
+          "total_descuento": 0.0,
+          "total_impuesto": 0.0,
+          "costo_directo": 10609.0,
+          "subtotal": 10609.0,
+          "base_impuesto": 10609.0,
+          "suma": 10609.0
+        },
+        "suma": 10609.0,
+        "ajuste_redondeo": 41.0,
+        "total": 10650.0
+      }
+    }
+  }
+}

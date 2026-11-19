@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "nota": "Trabajos de referencia. El oraculo calcula con ellos los casos dorados.",
+  "trabajos": [
+    {
+      "id": "reja_1200x1000",
+      "nombre": "Reja de ventana 1.20 x 1.00 m",
+      "plantilla": "reja_ventana",
+      "parametros": {
+        "ancho": 1200,
+        "alto": 1000,
+        "marco": "angulo-1x1-8",
+        "barrote": "cuadrado-1-2",
+        "separacion_max": 120,
+        "travesanos": 1,
+        "travesano": "solera-1x1-8",
+        "anclas": 4,
+        "ancla": "solera-1x1-8",
+        "largo_ancla": 100
+      },
+      "datos_trabajo": {
+        "con_instalacion": true,
+        "distancia_km": 0,
+        "lleva_motor": false
+      },
+      "evaluaciones": [
+        {
+          "id": "despiece",
+          "receta": "despiece",
+          "ajustes": {},
+          "presentaciones": [
+            "categorias",
+            "conceptos"
+          ]
+        },
+        {
+          "id": "por_m2",
+          "receta": "por_m2",
+          "ajustes": {}
+        },
+        {
+          "id": "por_kilo",
+          "receta": "por_kilo",
+          "ajustes": {}
+        },
+        {
+          "id": "material_por_factor",
+          "receta": "material_por_factor",
+          "ajustes": {}
+        }
+      ]
+    },
+    {
+      "id": "porton_3000x2200",
+      "nombre": "Porton abatible de 2 hojas 3.00 x 2.20 m",
+      "plantilla": "porton_abatible",
+      "parametros": {
+        "ancho": 3000,
+        "alto": 2200,
+        "hojas": 2,
+        "holgura_lateral": 10,
+        "holgura_central": 10,
+        "holgura_piso": 50,
+        "bastidor": "ptr-2x2-c14",
+        "relleno": "mixto",
+        "barrote": "tubular-1x1-c18",
+        "separacion_max": 110,
+        "lamina": "lamina-c18",
+        "alto_zoclo": 900,
+        "travesano": "ptr-2x2-c14",
+        "paso_punteo": 150,
+        "bisagra": "bisagra-tejuelo",
+        "pasador": "pasador-portacandado",
+        "picaporte": "picaporte-piso"
+      },
+      "datos_trabajo": {
+        "con_instalacion": true,
+        "distancia_km": 15,
+        "lleva_motor": true
+      },
+      "evaluaciones": [
+        {
+          "id": "despiece",
+          "receta": "despiece",
+          "ajustes": {}
+        },
+        {
+          "id": "despiece_iva_descuento",
+          "receta": "despiece",
+          "ajustes": {
+            "parametros": {
+              "con_iva": true,
+              "pct_descuento": 0.05
+            }
+          },
+          "presentaciones": [
+            "total",
+            "categorias",
+            "conceptos"
+          ]
+        },
+        {
+          "id": "despiece_ajustes_manuales",
+          "receta": "despiece",
+          "ajustes": {
+            "lineas_fijas": {
+              "mano_obra": 3000.0
+            },
+            "lineas_extra": [
+              {
+                "clave": "retiro",
+                "nombre": "Retiro del porton viejo",
+                "categoria": "extra",
+                "valor": 400.0
+              }
+            ]
+          }
+        },
+        {
+          "id": "por_m2",
+          "receta": "por_m2",
+          "ajustes": {}
+        },
+        {
+          "id": "por_kilo",
+          "receta": "por_kilo",
+          "ajustes": {}
+        },
+        {
+          "id": "material_por_factor",
+          "receta": "material_por_factor",
+          "ajustes": {}
+        }
+      ]
+    },
+    {
+      "id": "porton_1hoja_barrotes_1000x2100",
+      "nombre": "Porton abatible de 1 hoja con barrotes 1.00 x 2.10 m",
+      "plantilla": "porton_abatible",
+      "parametros": {
+        "ancho": 1000,
+        "alto": 2100,
+        "hojas": 1,
+        "holgura_lateral": 10,
+        "holgura_central": 10,
+        "holgura_piso": 50,
+        "bastidor": "ptr-2x2-c14",
+        "relleno": "barrotes",
+        "barrote": "redondo-1-2",
+        "separacion_max": 100,
+        "lamina": null,
+        "alto_zoclo": null,
+        "travesano": null,
+        "paso_punteo": 150,
+        "bisagra": "bisagra-tejuelo",
+        "pasador": "pasador-portacandado",
+        "picaporte": "picaporte-piso"
+      },
+      "datos_trabajo": {
+        "con_instalacion": true,
+        "distancia_km": 3,
+        "lleva_motor": false
+      },
+      "evaluaciones": [
+        {
+          "id": "despiece",
+          "receta": "despiece",
+          "ajustes": {}
+        },
+        {
+          "id": "por_m2",
+          "receta": "por_m2",
+          "ajustes": {}
+        }
+      ]
+    },
+    {
+      "id": "porton_lamina_2400x2000",
+      "nombre": "Porton abatible de 2 hojas de lamina 2.40 x 2.00 m",
+      "plantilla": "porton_abatible",
+      "parametros": {
+        "ancho": 2400,
+        "alto": 2000,
+        "hojas": 2,
+        "holgura_lateral": 10,
+        "holgura_central": 10,
+        "holgura_piso": 50,
+        "bastidor": "ptr-2x2-c14",
+        "relleno": "lamina",
+        "barrote": null,
+        "separacion_max": null,
+        "lamina": "lamina-c18",
+        "alto_zoclo": null,
+        "travesano": "tubular-1x1-c18",
+        "paso_punteo": 150,
+        "bisagra": "bisagra-tejuelo",
+        "pasador": "pasador-portacandado",
+        "picaporte": null
+      },
+      "datos_trabajo": {
+        "con_instalacion": false,
+        "distancia_km": 0,
+        "lleva_motor": false
+      },
+      "evaluaciones": [
+        {
+          "id": "despiece",
+          "receta": "despiece",
+          "ajustes": {}
+        },
+        {
+          "id": "material_por_factor",
+          "receta": "material_por_factor",
+          "ajustes": {}
+        }
+      ]
+    },
+    {
+      "id": "libre_barandal_7500",
+      "nombre": "Trabajo libre: barandal recto de 7.50 m capturado a mano",
+      "plantilla": "libre",
+      "parametros": {
+        "ancho": 7500,
+        "alto": 900,
+        "piezas": [
+          {
+            "grupo": "pasamanos",
+            "articulo": "ptr-2x2-c14",
+            "largo": 7500,
+            "cantidad": 2,
+            "corte": "recto"
+          },
+          {
+            "grupo": "postes",
+            "articulo": "ptr-2x2-c14",
+            "largo": 900,
+            "cantidad": 6,
+            "corte": "recto"
+          },
+          {
+            "grupo": "barrotes",
+            "articulo": "tubular-1x1-c18",
+            "largo": 798.4,
+            "cantidad": 40,
+            "corte": "recto"
+          }
+        ],
+        "paneles": [],
+        "herrajes": [],
+        "uniones": 92
+      },
+      "datos_trabajo": {
+        "con_instalacion": true,
+        "distancia_km": 8,
+        "lleva_motor": false
+      },
+      "evaluaciones": [
+        {
+          "id": "despiece",
+          "receta": "despiece",
+          "ajustes": {}
+        },
+        {
+          "id": "por_kilo",
+          "receta": "por_kilo",
+          "ajustes": {}
+        }
+      ]
+    }
+  ]
+}

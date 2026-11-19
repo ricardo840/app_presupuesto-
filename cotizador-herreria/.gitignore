@@ -1,0 +1,63 @@
+# Flutter y Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.metadata.bak
+coverage/
+
+# Android
+**/android/.gradle/
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/android/key.properties
+*.jks
+*.keystore
+
+# iOS y macOS
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/flutter_export_environment.sh
+**/macos/Flutter/ephemeral/
+**/DerivedData/
+
+# Windows y Linux
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# Editores
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+*.swp
+.DS_Store
+Thumbs.db
+
+# Python (oráculo y servidor de render)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secretos y datos personales: nunca al repositorio
+.env
+.env.*
+*.pem
+respaldos/
+fotos_clientes/
+
+# Claude Code: ajustes y notas personales
+.claude/settings.local.json
+CLAUDE.local.md

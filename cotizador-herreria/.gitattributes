@@ -1,0 +1,10 @@
+# Finales de línea iguales en Windows, Linux y macOS
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ttf binary
+*.otf binary
+*.zip binary
+*.pdf binary

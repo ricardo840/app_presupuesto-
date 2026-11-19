@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "nota": "Recetas mal formadas. Todas se evaluan con el trabajo reja_1200x1000 y los parametros de prueba. El codigo de error esperado esta en dorados/casos_recetas_error.json.",
+  "casos": [
+    {
+      "id": "ciclo_directo",
+      "conceptos": [
+        { "clave": "a", "nombre": "A", "categoria": "material", "formula": "b + 1" },
+        { "clave": "b", "nombre": "B", "categoria": "material", "formula": "a * 2" }
+      ]
+    },
+    {
+      "id": "ciclo_por_agregado",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra" },
+        { "clave": "extra_raro", "nombre": "Extra", "categoria": "extra", "formula": "costo_directo * 0.1" }
+      ]
+    },
+    {
+      "id": "utilidad_usa_subtotal",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra" },
+        { "clave": "utilidad", "nombre": "Utilidad", "categoria": "utilidad", "formula": "subtotal * 0.3" }
+      ]
+    },
+    {
+      "id": "impuesto_usa_suma",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra" },
+        { "clave": "iva", "nombre": "IVA", "categoria": "impuesto", "formula": "suma * 0.16" }
+      ]
+    },
+    {
+      "id": "se_refiere_a_si_mismo",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "material + 10" }
+      ]
+    },
+    {
+      "id": "variable_desconocida",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "kg_acero * precio_kilo_que_no_existe" }
+      ]
+    },
+    {
+      "id": "funcion_desconocida",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "raiz(kg_acero)" }
+      ]
+    },
+    {
+      "id": "clave_duplicada",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra" },
+        { "clave": "material", "nombre": "Material otra vez", "categoria": "material", "formula": "100" }
+      ]
+    },
+    {
+      "id": "clave_igual_a_parametro",
+      "conceptos": [
+        { "clave": "merma", "nombre": "Merma", "categoria": "material", "formula": "costo_material_compra * 0.05" }
+      ]
+    },
+    {
+      "id": "clave_reservada_cantidad",
+      "conceptos": [
+        { "clave": "kg_acero", "nombre": "Acero", "categoria": "material", "formula": "100" }
+      ]
+    },
+    {
+      "id": "clave_reservada_agregado",
+      "conceptos": [
+        { "clave": "subtotal", "nombre": "Subtotal", "categoria": "material", "formula": "100" }
+      ]
+    },
+    {
+      "id": "clave_con_guion",
+      "conceptos": [
+        { "clave": "mano-obra", "nombre": "Mano de obra", "categoria": "mano_obra", "formula": "100" }
+      ]
+    },
+    {
+      "id": "clave_con_mayuscula",
+      "conceptos": [
+        { "clave": "Material", "nombre": "Material", "categoria": "material", "formula": "100" }
+      ]
+    },
+    {
+      "id": "categoria_invalida",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "materiales", "formula": "100" }
+      ]
+    },
+    {
+      "id": "formula_con_error_de_sintaxis",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "kg_acero * (1 + merma" }
+      ]
+    },
+    {
+      "id": "condicion_con_error_de_sintaxis",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "100", "condicion": "con_instalacion &&" }
+      ]
+    },
+    {
+      "id": "dinero_no_numerico",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "con_instalacion" }
+      ]
+    },
+    {
+      "id": "condicion_no_booleana",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "100", "condicion": "1 + 1" }
+      ]
+    },
+    {
+      "id": "division_entre_cero",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra / distancia_km" }
+      ]
+    },
+    {
+      "id": "extra_de_plantilla_ausente",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "x_escalones * 100" }
+      ]
+    },
+    {
+      "id": "linea_fija_desconocida",
+      "ajustes": { "lineas_fijas": { "no_existe": 100 } },
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "100" }
+      ]
+    },
+    {
+      "id": "linea_extra_duplicada",
+      "ajustes": { "lineas_extra": [ { "clave": "material", "nombre": "Otro", "categoria": "extra", "valor": 50 } ] },
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "100" }
+      ]
+    },
+    {
+      "id": "parametro_de_ajuste_desconocido",
+      "ajustes": { "parametros": { "parametro_inventado": 1 } },
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "100" }
+      ]
+    },
+    {
+      "id": "valida_auxiliar_usa_suma",
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra" },
+        { "clave": "anticipo", "nombre": "Anticipo sugerido", "categoria": "auxiliar", "formula": "suma * 50%" }
+      ]
+    },
+    {
+      "id": "valida_orden_invertido",
+      "conceptos": [
+        { "clave": "utilidad", "nombre": "Utilidad", "categoria": "utilidad", "formula": "costo_directo * 20%" },
+        { "clave": "mano_obra", "nombre": "Mano de obra", "categoria": "mano_obra", "formula": "material * 0.8" },
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "nota": "Parametros de PRUEBA (tarifas y rendimientos FICTICIOS). El herrero real configura los suyos en la app.",
+  "parametros": {
+    "merma": { "valor": 0.05, "tipo": "numero", "unidad": "fraccion", "descripcion": "Desperdicio de material que se cobra" },
+    "consumibles_kg": { "valor": 6, "tipo": "numero", "unidad": "$/kg", "descripcion": "Soldadura, discos y gas por kilo de acero" },
+    "min_corte": { "valor": 4, "tipo": "numero", "unidad": "min", "descripcion": "Minutos por corte" },
+    "min_union": { "valor": 3, "tipo": "numero", "unidad": "min", "descripcion": "Minutos por union soldada" },
+    "h_m2_pintura": { "valor": 0.5, "tipo": "numero", "unidad": "h/m2", "descripcion": "Horas de pintura por metro cuadrado" },
+    "tarifa_hora": { "valor": 150, "tipo": "numero", "unidad": "$/h", "descripcion": "Mano de obra por hora y por persona" },
+    "personas": { "valor": 1, "tipo": "numero", "unidad": "personas", "descripcion": "Personas trabajando" },
+    "precio_pintura_m2": { "valor": 90, "tipo": "numero", "unidad": "$/m2", "descripcion": "Primario y pintura por metro cuadrado" },
+    "instalacion_base": { "valor": 500, "tipo": "numero", "unidad": "$", "descripcion": "Cargo base por instalar" },
+    "costo_km": { "valor": 12, "tipo": "numero", "unidad": "$/km", "descripcion": "Traslado por kilometro" },
+    "pct_utilidad": { "valor": 0.30, "tipo": "numero", "unidad": "fraccion", "descripcion": "Utilidad sobre el costo directo" },
+    "pct_descuento": { "valor": 0, "tipo": "numero", "unidad": "fraccion", "descripcion": "Descuento sobre el subtotal" },
+    "con_iva": { "valor": false, "tipo": "booleano", "unidad": "", "descripcion": "Agregar IVA al presupuesto" },
+    "tasa_iva": { "valor": 0.16, "tipo": "numero", "unidad": "fraccion", "descripcion": "Tasa de IVA" },
+    "tarifa_m2_reja": { "valor": 1100, "tipo": "numero", "unidad": "$/m2", "descripcion": "Precio por metro cuadrado de reja" },
+    "tarifa_m2_porton": { "valor": 1850, "tipo": "numero", "unidad": "$/m2", "descripcion": "Precio por metro cuadrado de porton" },
+    "precio_kg_trabajado": { "valor": 95, "tipo": "numero", "unidad": "$/kg", "descripcion": "Precio por kilo de acero ya trabajado" },
+    "precio_motor": { "valor": 9500, "tipo": "numero", "unidad": "$", "descripcion": "Motor para porton, instalado" },
+    "factor_material": { "valor": 2.2, "tipo": "numero", "unidad": "factor", "descripcion": "Multiplicador sobre el costo del material" }
+  },
+  "campos_trabajo": {
+    "con_instalacion": { "tipo": "booleano", "defecto": true, "nombre": "Incluye instalacion" },
+    "distancia_km": { "tipo": "numero", "defecto": 0, "nombre": "Distancia a la obra (km)" },
+    "lleva_motor": { "tipo": "booleano", "defecto": false, "nombre": "Lleva motor" }
+  }
+}

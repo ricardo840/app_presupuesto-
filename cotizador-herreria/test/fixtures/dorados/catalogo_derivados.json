@@ -1,0 +1,62 @@
+{
+  "nota": "Valores derivados esperados para cada articulo del catalogo de prueba.",
+  "tolerancia_abs": 1e-05,
+  "articulos": {
+    "angulo-1x1-8": {
+      "area_mm2": 151.209375,
+      "peso_kg_m": 1.186994,
+      "cara_mm": 25.4,
+      "fondo_mm": 25.4,
+      "perimetro_pintura_mm": 101.6
+    },
+    "cuadrado-1-2": {
+      "area_mm2": 161.29,
+      "peso_kg_m": 1.266126,
+      "cara_mm": 12.7,
+      "fondo_mm": 12.7,
+      "perimetro_pintura_mm": 50.8
+    },
+    "redondo-1-2": {
+      "area_mm2": 126.67687,
+      "peso_kg_m": 0.994413,
+      "cara_mm": 12.7,
+      "fondo_mm": 12.7,
+      "perimetro_pintura_mm": 39.898227
+    },
+    "solera-1x1-8": {
+      "area_mm2": 80.645,
+      "peso_kg_m": 0.633063,
+      "cara_mm": 25.4,
+      "fondo_mm": 3.175,
+      "perimetro_pintura_mm": 57.15
+    },
+    "ptr-2x2-c14": {
+      "area_mm2": 372.5799,
+      "peso_kg_m": 2.924752,
+      "cara_mm": 50.8,
+      "fondo_mm": 50.8,
+      "perimetro_pintura_mm": 203.2
+    },
+    "tubular-1x1-c18": {
+      "area_mm2": 117.906556,
+      "peso_kg_m": 0.925566,
+      "cara_mm": 25.4,
+      "fondo_mm": 25.4,
+      "perimetro_pintura_mm": 101.6
+    },
+    "tubo-1-1-2-c16": {
+      "area_mm2": 175.118105,
+      "peso_kg_m": 1.374677,
+      "cara_mm": 38.1,
+      "fondo_mm": 38.1,
+      "perimetro_pintura_mm": 119.69468
+    },
+    "lamina-c18": {
+      "espesor_mm": 1.219,
+      "peso_kg_m2": 9.56915
+    },
+    "bisagra-tejuelo": {},
+    "pasador-portacandado": {},
+    "picaporte-piso": {}
+  }
+}

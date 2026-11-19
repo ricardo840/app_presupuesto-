@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "nota": "Recetas de PRUEBA. Son cuatro maneras tipicas de cotizar; ninguna es la del herrero real hasta que se calibre.",
+  "recetas": [
+    {
+      "clave": "despiece",
+      "nombre": "Despiece detallado",
+      "version": 1,
+      "descripcion": "Material comprado por tramo mas merma, consumibles, pintura, mano de obra por rendimientos y utilidad.",
+      "redondeo_total": { "modo": "arriba", "multiplo": 50 },
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra * (1 + merma)" },
+        { "clave": "consumibles", "nombre": "Consumibles", "categoria": "material", "formula": "kg_acero * consumibles_kg", "visible_cliente": false },
+        { "clave": "pintura", "nombre": "Pintura y primario", "categoria": "material", "formula": "m2_pintura * precio_pintura_m2" },
+        { "clave": "horas", "nombre": "Horas estimadas", "categoria": "auxiliar", "formula": "(cortes * min_corte + uniones * min_union) / 60 + m2_pintura * h_m2_pintura" },
+        { "clave": "mano_obra", "nombre": "Mano de obra", "categoria": "mano_obra", "formula": "horas * tarifa_hora * personas" },
+        { "clave": "instalacion", "nombre": "Instalacion", "categoria": "extra", "formula": "instalacion_base + distancia_km * costo_km", "condicion": "con_instalacion" },
+        { "clave": "motor", "nombre": "Motor", "categoria": "extra", "formula": "precio_motor", "condicion": "lleva_motor" },
+        { "clave": "utilidad", "nombre": "Utilidad", "categoria": "utilidad", "formula": "costo_directo * pct_utilidad", "visible_cliente": false },
+        { "clave": "descuento", "nombre": "Descuento", "categoria": "descuento", "formula": "-subtotal * pct_descuento", "condicion": "pct_descuento > 0" },
+        { "clave": "iva", "nombre": "IVA", "categoria": "impuesto", "formula": "base_impuesto * tasa_iva", "condicion": "con_iva" }
+      ]
+    },
+    {
+      "clave": "por_m2",
+      "nombre": "Por metro cuadrado",
+      "version": 1,
+      "descripcion": "Un precio por metro cuadrado segun el tipo de trabajo, mas instalacion.",
+      "redondeo_total": { "modo": "cercano", "multiplo": 10 },
+      "conceptos": [
+        { "clave": "trabajo", "nombre": "Trabajo de herreria", "categoria": "global", "formula": "area_m2 * si(tipo == \"porton_abatible\", tarifa_m2_porton, tarifa_m2_reja)" },
+        { "clave": "instalacion", "nombre": "Instalacion", "categoria": "extra", "formula": "instalacion_base", "condicion": "con_instalacion" }
+      ]
+    },
+    {
+      "clave": "por_kilo",
+      "nombre": "Por kilo de acero",
+      "version": 1,
+      "descripcion": "Precio por kilo ya trabajado; herrajes, motor e instalacion aparte.",
+      "redondeo_total": { "modo": "arriba", "multiplo": 100 },
+      "conceptos": [
+        { "clave": "acero", "nombre": "Acero trabajado", "categoria": "global", "formula": "kg_acero * precio_kg_trabajado" },
+        { "clave": "herrajes", "nombre": "Herrajes", "categoria": "material", "formula": "costo_herrajes" },
+        { "clave": "motor", "nombre": "Motor", "categoria": "extra", "formula": "precio_motor", "condicion": "lleva_motor" },
+        { "clave": "instalacion", "nombre": "Instalacion", "categoria": "extra", "formula": "instalacion_base", "condicion": "con_instalacion" }
+      ]
+    },
+    {
+      "clave": "material_por_factor",
+      "nombre": "Material por factor",
+      "version": 1,
+      "descripcion": "El total es el material multiplicado por un factor que cubre mano de obra y utilidad.",
+      "redondeo_total": { "modo": "arriba", "multiplo": 50 },
+      "conceptos": [
+        { "clave": "material", "nombre": "Material", "categoria": "material", "formula": "costo_material_compra" },
+        { "clave": "trabajo", "nombre": "Mano de obra y utilidad", "categoria": "global", "formula": "material * (factor_material - 1)" },
+        { "clave": "instalacion", "nombre": "Instalacion", "categoria": "extra", "formula": "instalacion_base", "condicion": "con_instalacion" }
+      ]
+    }
+  ]
+}

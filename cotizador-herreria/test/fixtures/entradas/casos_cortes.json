@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "nota": "Casos para el optimizador de cortes. El resultado esperado esta en dorados/casos_cortes.json.",
+  "casos": [
+    { "id": "marco_reja", "tramo_mm": 6000, "kerf_mm": 3, "largos": [1200, 1000, 1200, 1000] },
+    { "id": "ajuste_exacto", "tramo_mm": 6000, "kerf_mm": 3, "largos": [2998.5, 2998.5] },
+    { "id": "no_cabe_por_el_corte", "tramo_mm": 6000, "kerf_mm": 3, "largos": [3000, 3000] },
+    { "id": "mezcla", "tramo_mm": 6000, "kerf_mm": 3, "largos": [2500, 700, 3500, 1200, 2500, 3500, 2400] },
+    { "id": "pieza_mas_larga_que_el_tramo", "tramo_mm": 6000, "kerf_mm": 3, "largos": [7000, 2000] },
+    { "id": "multiplo_exacto_del_tramo", "tramo_mm": 6000, "kerf_mm": 3, "largos": [12000] },
+    { "id": "sin_kerf", "tramo_mm": 6000, "kerf_mm": 0, "largos": [3000, 3000, 2000, 2000, 2000] },
+    { "id": "muchas_iguales", "tramo_mm": 6000, "kerf_mm": 3, "largos": [949.2, 949.2, 949.2, 949.2, 949.2, 949.2, 949.2, 949.2] },
+    { "id": "tramo_de_6100", "tramo_mm": 6100, "kerf_mm": 3, "largos": [3048, 3048, 1500] },
+    { "id": "vacio", "tramo_mm": 6000, "kerf_mm": 3, "largos": [] }
+  ]
+}

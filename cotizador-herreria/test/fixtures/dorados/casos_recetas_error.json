@@ -1,0 +1,410 @@
+{
+  "nota": "Se evaluan con el trabajo reja_1200x1000. 'error' es el codigo esperado; los casos 'valida_*' no fallan.",
+  "casos": [
+    {
+      "id": "ciclo_directo",
+      "conceptos": [
+        {
+          "clave": "a",
+          "nombre": "A",
+          "categoria": "material",
+          "formula": "b + 1"
+        },
+        {
+          "clave": "b",
+          "nombre": "B",
+          "categoria": "material",
+          "formula": "a * 2"
+        }
+      ],
+      "ajustes": {},
+      "error": "ciclo"
+    },
+    {
+      "id": "ciclo_por_agregado",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "costo_material_compra"
+        },
+        {
+          "clave": "extra_raro",
+          "nombre": "Extra",
+          "categoria": "extra",
+          "formula": "costo_directo * 0.1"
+        }
+      ],
+      "ajustes": {},
+      "error": "ciclo"
+    },
+    {
+      "id": "utilidad_usa_subtotal",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "costo_material_compra"
+        },
+        {
+          "clave": "utilidad",
+          "nombre": "Utilidad",
+          "categoria": "utilidad",
+          "formula": "subtotal * 0.3"
+        }
+      ],
+      "ajustes": {},
+      "error": "ciclo"
+    },
+    {
+      "id": "impuesto_usa_suma",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "costo_material_compra"
+        },
+        {
+          "clave": "iva",
+          "nombre": "IVA",
+          "categoria": "impuesto",
+          "formula": "suma * 0.16"
+        }
+      ],
+      "ajustes": {},
+      "error": "ciclo"
+    },
+    {
+      "id": "se_refiere_a_si_mismo",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "material + 10"
+        }
+      ],
+      "ajustes": {},
+      "error": "ciclo"
+    },
+    {
+      "id": "variable_desconocida",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "kg_acero * precio_kilo_que_no_existe"
+        }
+      ],
+      "ajustes": {},
+      "error": "variable_desconocida"
+    },
+    {
+      "id": "funcion_desconocida",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "raiz(kg_acero)"
+        }
+      ],
+      "ajustes": {},
+      "error": "funcion_desconocida"
+    },
+    {
+      "id": "clave_duplicada",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "costo_material_compra"
+        },
+        {
+          "clave": "material",
+          "nombre": "Material otra vez",
+          "categoria": "material",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {},
+      "error": "nombre_duplicado"
+    },
+    {
+      "id": "clave_igual_a_parametro",
+      "conceptos": [
+        {
+          "clave": "merma",
+          "nombre": "Merma",
+          "categoria": "material",
+          "formula": "costo_material_compra * 0.05"
+        }
+      ],
+      "ajustes": {},
+      "error": "nombre_duplicado"
+    },
+    {
+      "id": "clave_reservada_cantidad",
+      "conceptos": [
+        {
+          "clave": "kg_acero",
+          "nombre": "Acero",
+          "categoria": "material",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {},
+      "error": "nombre_reservado"
+    },
+    {
+      "id": "clave_reservada_agregado",
+      "conceptos": [
+        {
+          "clave": "subtotal",
+          "nombre": "Subtotal",
+          "categoria": "material",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {},
+      "error": "nombre_reservado"
+    },
+    {
+      "id": "clave_con_guion",
+      "conceptos": [
+        {
+          "clave": "mano-obra",
+          "nombre": "Mano de obra",
+          "categoria": "mano_obra",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {},
+      "error": "clave_invalida"
+    },
+    {
+      "id": "clave_con_mayuscula",
+      "conceptos": [
+        {
+          "clave": "Material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {},
+      "error": "clave_invalida"
+    },
+    {
+      "id": "categoria_invalida",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "materiales",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {},
+      "error": "categoria_invalida"
+    },
+    {
+      "id": "formula_con_error_de_sintaxis",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "kg_acero * (1 + merma"
+        }
+      ],
+      "ajustes": {},
+      "error": "sintaxis"
+    },
+    {
+      "id": "condicion_con_error_de_sintaxis",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "100",
+          "condicion": "con_instalacion &&"
+        }
+      ],
+      "ajustes": {},
+      "error": "sintaxis"
+    },
+    {
+      "id": "dinero_no_numerico",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "con_instalacion"
+        }
+      ],
+      "ajustes": {},
+      "error": "tipo"
+    },
+    {
+      "id": "condicion_no_booleana",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "100",
+          "condicion": "1 + 1"
+        }
+      ],
+      "ajustes": {},
+      "error": "tipo"
+    },
+    {
+      "id": "division_entre_cero",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "costo_material_compra / distancia_km"
+        }
+      ],
+      "ajustes": {},
+      "error": "division_entre_cero"
+    },
+    {
+      "id": "extra_de_plantilla_ausente",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "x_escalones * 100"
+        }
+      ],
+      "ajustes": {},
+      "error": "variable_desconocida"
+    },
+    {
+      "id": "linea_fija_desconocida",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {
+        "lineas_fijas": {
+          "no_existe": 100
+        }
+      },
+      "error": "linea_fija_desconocida"
+    },
+    {
+      "id": "linea_extra_duplicada",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {
+        "lineas_extra": [
+          {
+            "clave": "material",
+            "nombre": "Otro",
+            "categoria": "extra",
+            "valor": 50
+          }
+        ]
+      },
+      "error": "nombre_duplicado"
+    },
+    {
+      "id": "parametro_de_ajuste_desconocido",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "100"
+        }
+      ],
+      "ajustes": {
+        "parametros": {
+          "parametro_inventado": 1
+        }
+      },
+      "error": "parametro_desconocido"
+    },
+    {
+      "id": "valida_auxiliar_usa_suma",
+      "conceptos": [
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "costo_material_compra"
+        },
+        {
+          "clave": "anticipo",
+          "nombre": "Anticipo sugerido",
+          "categoria": "auxiliar",
+          "formula": "suma * 50%"
+        }
+      ],
+      "ajustes": {},
+      "esperado": {
+        "total": 915.0,
+        "lineas": {
+          "material": 915.0,
+          "anticipo": 457.5
+        }
+      }
+    },
+    {
+      "id": "valida_orden_invertido",
+      "conceptos": [
+        {
+          "clave": "utilidad",
+          "nombre": "Utilidad",
+          "categoria": "utilidad",
+          "formula": "costo_directo * 20%"
+        },
+        {
+          "clave": "mano_obra",
+          "nombre": "Mano de obra",
+          "categoria": "mano_obra",
+          "formula": "material * 0.8"
+        },
+        {
+          "clave": "material",
+          "nombre": "Material",
+          "categoria": "material",
+          "formula": "costo_material_compra"
+        }
+      ],
+      "ajustes": {},
+      "esperado": {
+        "total": 1976.4,
+        "lineas": {
+          "utilidad": 329.4,
+          "mano_obra": 732.0,
+          "material": 915.0
+        }
+      }
+    }
+  ]
+}

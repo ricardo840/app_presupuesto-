@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "nota": "Catalogo de PRUEBA. Los precios son FICTICIOS y solo sirven para las pruebas automaticas. No son precios reales ni se deben mostrar como tales.",
+  "constantes": {
+    "densidad_kg_m3": 7850,
+    "kerf_mm": 3,
+    "desperdicio_lamina": 0.10
+  },
+  "articulos": [
+    {
+      "clave": "angulo-1x1-8",
+      "nombre": "Angulo 1\" x 1/8\"",
+      "tipo": "perfil",
+      "familia": "angulo",
+      "geometria": { "a": 25.4, "e": 3.175 },
+      "unidad_compra": "tramo",
+      "largo_tramo_mm": 6000,
+      "precio": 285.00
+    },
+    {
+      "clave": "cuadrado-1-2",
+      "nombre": "Cuadrado macizo 1/2\"",
+      "tipo": "perfil",
+      "familia": "cuadrado",
+      "geometria": { "a": 12.7 },
+      "unidad_compra": "tramo",
+      "largo_tramo_mm": 6000,
+      "precio": 240.00
+    },
+    {
+      "clave": "redondo-1-2",
+      "nombre": "Redondo macizo 1/2\"",
+      "tipo": "perfil",
+      "familia": "redondo",
+      "geometria": { "d": 12.7 },
+      "unidad_compra": "tramo",
+      "largo_tramo_mm": 6000,
+      "precio": 195.00
+    },
+    {
+      "clave": "solera-1x1-8",
+      "nombre": "Solera 1\" x 1/8\"",
+      "tipo": "perfil",
+      "familia": "solera",
+      "geometria": { "a": 25.4, "e": 3.175 },
+      "unidad_compra": "tramo",
+      "largo_tramo_mm": 6000,
+      "precio": 150.00
+    },
+    {
+      "clave": "ptr-2x2-c14",
+      "nombre": "PTR 2\" x 2\" cal. 14",
+      "tipo": "perfil",
+      "familia": "tubular",
+      "geometria": { "a": 50.8, "b": 50.8, "e": 1.905 },
+      "unidad_compra": "tramo",
+      "largo_tramo_mm": 6000,
+      "precio": 620.00
+    },
+    {
+      "clave": "tubular-1x1-c18",
+      "nombre": "Tubular 1\" x 1\" cal. 18",
+      "tipo": "perfil",
+      "familia": "tubular",
+      "geometria": { "a": 25.4, "b": 25.4, "e": 1.219 },
+      "unidad_compra": "tramo",
+      "largo_tramo_mm": 6000,
+      "precio": 215.00
+    },
+    {
+      "clave": "tubo-1-1-2-c16",
+      "nombre": "Tubo redondo 1 1/2\" cal. 16",
+      "tipo": "perfil",
+      "familia": "tubo",
+      "geometria": { "d": 38.1, "e": 1.524 },
+      "unidad_compra": "tramo",
+      "largo_tramo_mm": 6000,
+      "precio": 330.00
+    },
+    {
+      "clave": "lamina-c18",
+      "nombre": "Lamina lisa cal. 18 (4' x 10')",
+      "tipo": "lamina",
+      "familia": "lamina",
+      "geometria": { "e": 1.219 },
+      "unidad_compra": "hoja",
+      "hoja_mm": [1219, 3048],
+      "precio": 1150.00
+    },
+    {
+      "clave": "bisagra-tejuelo",
+      "nombre": "Bisagra de tejuelo",
+      "tipo": "herraje",
+      "unidad_compra": "pieza",
+      "precio": 85.00
+    },
+    {
+      "clave": "pasador-portacandado",
+      "nombre": "Pasador con portacandado",
+      "tipo": "herraje",
+      "unidad_compra": "pieza",
+      "precio": 120.00
+    },
+    {
+      "clave": "picaporte-piso",
+      "nombre": "Picaporte de piso",
+      "tipo": "herraje",
+      "unidad_compra": "pieza",
+      "precio": 95.00
+    }
+  ]
+}
