@@ -2,7 +2,7 @@
 
 App móvil en Flutter, de uso personal, para que un herrero cotice al momento y le muestre al cliente cómo quedará el trabajo. Funciona sin conexión. Un solo modelo paramétrico produce el precio, el despiece, la lista de corte y la imagen, así que nunca se contradicen.
 
-El dueño del proyecto es Lino. Todo va en español: código de dominio, comentarios, commits, documentos y textos de la app.
+El dueño del proyecto es Lino. La app es para Hugo, el herrero que la va a usar. Todo va en español: código de dominio, comentarios, commits, documentos y textos de la app.
 
 Estas instrucciones son para el agente de programación que trabaje en este repositorio, sea cual sea la herramienta.
 
@@ -13,7 +13,7 @@ Estas instrucciones son para el agente de programación que trabaje en este repo
 3. Antes de programar lee las secciones que la tarea cita. Lo que está especificado no se improvisa.
 4. Escribe primero las pruebas que la tarea pide, después el código, después ejecuta el procedimiento `verify`.
 5. Con todo en verde: commit, marca la casilla en `docs/PLAN.md`, agrega una entrada a `docs/PROGRESO.md` y pasa a la siguiente tarea. No preguntes si continúas.
-6. Al terminar una fase sigue el procedimiento `cierre-de-fase` y continúa con la siguiente.
+6. Al terminar una fase sigue el procedimiento `cierre-de-fase` y detente: Lino revisa cada fase antes de empezar la siguiente.
 
 ## Procedimientos
 
@@ -97,7 +97,7 @@ Sigue trabajando por tu cuenta salvo en estos casos:
 - **No hay con qué verificar.** Falta `flutter`, o el proyecto no compila por el entorno. Explica qué falta y detente. No escribas código que no puedas probar.
 - **Tres intentos distintos fallaron en la misma tarea.** Descarta los cambios con `git restore .`, anota en `docs/PROGRESO.md` qué probaste y por qué falló, regístralo en "Bloqueos" de `docs/PENDIENTES_LINO.md` y pasa a la siguiente tarea que no dependa de esa. Si no hay ninguna, detente.
 - **Falta algo que solo Lino puede dar** y `docs/PENDIENTES_LINO.md` no trae un valor por defecto. Si lo trae, úsalo y sigue.
-- **Algo irreversible o hacia afuera**: `git push`, publicar, borrar datos que no creaste, llamar a un servicio de pago. Pide confirmación.
+- **Algo irreversible o hacia afuera**: publicar, borrar datos que no creaste, llamar a un servicio de pago. Pide confirmación.
 - **Un dorado contradice a la especificación.** Sigue `.claude/rules/pruebas.md`.
 
 Si la sesión se alarga y empiezas a perder detalle, termina la tarea en curso, deja todo en un commit y detente con un resumen. La siguiente sesión retoma con el procedimiento `continuar`.
@@ -106,7 +106,8 @@ Si la sesión se alarga y empiezas a perder detalle, termina la tarea en curso, 
 
 - Rama `main`. Al menos un commit por tarea, con su identificador: `F1-T3: optimizador de cortes`.
 - Etiqueta `fase-N` al cerrar cada fase.
-- Sin `git push` salvo que Lino lo pida. Sin reescribir historia: nada de `rebase`, `--amend` sobre commits etiquetados ni `reset --hard`.
+- Después de cada commit, `git push origin main`; al cerrar una fase, también la etiqueta (`git push origin fase-N`). Lino lo autorizó (D-021). Nunca `push --force`.
+- Sin reescribir historia: nada de `rebase`, `--amend` sobre commits etiquetados ni `reset --hard`.
 - No subas claves, `key.properties`, almacenes de llaves ni fotos de clientes.
 
 ## Una tarea está terminada cuando

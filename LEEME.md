@@ -37,7 +37,7 @@ En tu computadora necesitas Flutter, Git y, de preferencia, Python (solo para co
 
 1. Crea la carpeta del repositorio y copia ahí **todo** el contenido de este paquete, incluida la carpeta `.claude` (empieza con punto; en Windows puede estar oculta).
 2. Abre `docs/PENDIENTES_LINO.md` y responde lo que puedas. Si no respondes nada, la IA usa los valores por defecto. Lo que más conviene decidir desde ahora: **P-01** (nombre e identificador de la app), **P-03** (estilo) y **P-04** (qué entiendes por "Opciones").
-3. Si puedes, consigue lo de la sección "Lo que hace falta del herrero". No detiene nada, pero mientras falte la app cotiza con formas de cobrar y precios de ejemplo.
+3. Si puedes, consigue lo de la sección "Lo que hace falta del herrero (Hugo)". No detiene nada, pero mientras falte la app cotiza con formas de cobrar y precios de ejemplo.
 
 ## Arrancar
 
@@ -81,7 +81,7 @@ Dos hábitos que ahorran: abre una sesión nueva al terminar cada bloque de trab
 - **Al cerrar cada fase** la IA deja en `docs/PROGRESO.md` una lista "Para probar en el teléfono". Pruébala. La IA no puede usar el micrófono, la cámara ni compartir por WhatsApp; eso solo lo puedes comprobar tú.
 - **Si algo está mal**, escríbelo en "Correcciones de Lino" de `docs/PENDIENTES_LINO.md`. Es lo primero que atiende en la siguiente sesión.
 - **Si se equivoca dos veces en lo mismo**, agrégalo como regla en `AGENTS.md` o en el archivo de `.claude/rules/` que corresponda. Las reglas concretas funcionan mejor que las generales.
-- **Nunca sube nada por su cuenta**: `git push` siempre te pide permiso.
+- **Sube cada commit a GitHub** (`git push`) para que todo quede respaldado; Claude Code te pide confirmar cada subida. Nunca fuerza un push ni reescribe la historia.
 
 ## Qué es lo que protege el resultado
 

@@ -155,5 +155,5 @@ No hay servidor propio salvo el de render. Como la app es personal, las claves v
 
 ## 10. Identidad del proyecto
 
-- Paquete de Dart: `cotizador_herreria`.
-- Nombre visible e identificador de la app: los de `docs/PENDIENTES_LINO.md` (P-01). El identificador se decide antes de instalar en el teléfono; cambiarlo después obliga a reinstalar y restaurar el respaldo.
+- Paquete de Dart: `linforge`.
+- Nombre visible: **LinForge**. Identificador de la app: `mx.lino.linforge` (P-01 de `docs/PENDIENTES_LINO.md`). El identificador se decide antes de instalar en el teléfono; cambiarlo después obliga a reinstalar y restaurar el respaldo.

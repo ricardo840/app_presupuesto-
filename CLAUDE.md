@@ -15,5 +15,5 @@ Las instrucciones del proyecto están en `AGENTS.md`, que se carga con la línea
 
 - Los procedimientos de `.claude/skills/` están disponibles como comandos: `/continuar`, `/verify`, `/nueva-plantilla`, `/cierre-de-fase` y `/estado`.
 - Las reglas de `.claude/rules/` se cargan solas al abrir archivos de cada carpeta.
-- `.claude/settings.json` fija el modelo de la sesión (`opus`), el modelo por defecto de los subagentes (`sonnet`) y los permisos: las ediciones y los comandos de Flutter, Dart y git local corren sin preguntar; `git push` siempre pregunta.
+- `.claude/settings.json` fija el modelo de la sesión (`opus`), el modelo por defecto de los subagentes (`sonnet`) y los permisos: las ediciones y los comandos de Flutter, Dart y git local corren sin preguntar; `git push` pide confirmación cada vez (Lino autorizó subir cada commit, D-021) y `push --force` está prohibido.
 - Si cambias una regla, cámbiala en `AGENTS.md`, en `docs/DIRECCION.md` o en `.claude/rules/`, no aquí.

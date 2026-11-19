@@ -11,8 +11,8 @@ argument-hint: "[número de fase]"
 3. **Construye.** Si el equipo lo permite: `flutter build apk --debug`. Si no se puede, dilo y explica por qué.
 4. **Escribe la prueba manual.** En `docs/PROGRESO.md`, bajo "Para probar en el teléfono — fase N", una lista de 5 a 12 pasos concretos con el resultado esperado de cada uno. Empieza por lo que no pudiste verificar en dispositivo.
 5. **Resume.** En la misma entrada: qué se construyó, qué decisiones se tomaron por defecto, qué quedó pendiente y qué necesita Lino responder antes o durante la fase siguiente.
-6. **Etiqueta.** Commit `fase-N: cierre` y `git tag fase-N`.
+6. **Etiqueta y sube.** Commit `fase-N: cierre`, `git tag fase-N`, `git push origin main` y `git push origin fase-N`.
 7. **Prepara lo que sigue.** Lee completa la fase siguiente en `docs/PLAN.md`. Si con lo aprendido alguna tarea ya no tiene sentido, está mal ordenada o le falta un paso, corrige el plan y deja una línea en `docs/DECISIONES.md` con el motivo.
-8. **Continúa** con la primera tarea de la fase siguiente. No esperes la revisión de Lino: sus observaciones llegarán a "Correcciones de Lino" y se atienden primero en cuanto aparezcan.
+8. **Detente.** Entrégale a Lino un resumen corto, sin tecnicismos: qué ya puede probar, la lista del teléfono y qué necesitas que responda. La fase siguiente empieza cuando Lino escriba `/continuar`; sus observaciones van a "Correcciones de Lino" y se atienden primero.
 
 Al cerrar la última fase, en lugar del paso 8 entrega el resumen final: la tabla de requisitos con su estado y lo que quedó fuera.

@@ -59,3 +59,12 @@ El kit estaba en la subcarpeta `cotizador-herreria/` y Claude Code no cargaba `.
 
 **D-018 · 2026-11-19 · La app se llama LinForge.**
 Respuesta de Lino a P-01 (nombre visible). El identificador se fija antes de F0-T2.
+
+**D-019 · 2026-11-19 · Identificador `mx.lino.linforge` y paquete de Dart `linforge`.**
+Completa P-01. Lino es el dueño del proyecto; la app es para Hugo, el herrero. Se fija antes de F0-T2 porque cambiarlo después obliga a reinstalar.
+
+**D-020 · 2026-11-19 · El agente se detiene al cerrar cada fase.**
+Lino revisa cada fase antes de empezar la siguiente. Sustituye el paso "continúa con la siguiente fase" de `cierre-de-fase`.
+
+**D-021 · 2026-11-19 · Cada commit se sube a GitHub.**
+Respuesta de Lino a P-10: el historial en GitHub sirve de respaldo. Nunca se fuerza un push ni se reescribe la historia. Claude Code sigue pidiendo confirmación de cada `git push` en `.claude/settings.json`; quitarla es decisión de Lino.

@@ -6,15 +6,15 @@ Lo que solo tú puedes decidir o conseguir. El agente no se detiene por esto: us
 
 **P-01 · Nombre e identificador de la app** — antes de F0-T2
 Por defecto: nombre visible "Cotizador de herrería"; organización `mx.lino` (la app queda como `mx.lino.cotizador_herreria`). El identificador conviene decidirlo antes de instalar en el teléfono: cambiarlo después obliga a reinstalar y restaurar el respaldo.
-Respuesta: nombre visible **LinForge** (2026-11-19). Identificador: pendiente.
+Respuesta: nombre visible **LinForge**; identificador `mx.lino.linforge`; paquete de Dart `linforge` (2026-11-19).
 
 **P-02 · Teléfono o tableta** — antes de la fase 4
 Por defecto: teléfono Android en vertical; debe verse bien también en tableta.
-Respuesta:
+Respuesta: teléfono, el valor por defecto (2026-11-19).
 
 **P-03 · Estilo visual** — antes de la fase 4
 Por defecto: componentes de estilo Cupertino, con tema claro y oscuro. Se puede cambiar a Material sin rehacer las pantallas, porque todas usan los componentes de `lib/ui/componentes/`.
-Respuesta:
+Respuesta: estilo por defecto (Cupertino), con tema claro y oscuro (2026-11-19).
 
 **P-04 · Qué significa "Opciones"** — antes de la fase 4
 Pediste tres secciones: anteriores, opciones y pendientes. Por defecto, "Opciones" reúne (a) los modelos o simulaciones guardados para enseñar o reutilizar, sin cliente, y (b) los presupuestos con varias alternativas por decidir, que se comparan lado a lado. Si pensabas en otra cosa, dilo aquí.
@@ -45,14 +45,14 @@ Respuesta:
 **P-10 · Repositorio remoto** — cuando quieras
 ¿Subir el repositorio a GitHub como privado? El agente nunca hace `git push` sin que lo pidas.
 Por defecto: solo local.
-Respuesta:
+Respuesta: sí. Está en GitHub (`origin`) y el agente sube cada commit (2026-11-19).
 
 **P-11 · Fases opcionales** — al cerrar la fase 10
 Conversación de voz en tiempo real, realidad aumentada, escalera de caracol y ornamentos.
 Por defecto: no se hacen.
 Respuesta:
 
-## Lo que hace falta del herrero
+## Lo que hace falta del herrero (Hugo)
 
 Sin esto la app funciona, pero cotiza con recetas y precios de ejemplo.
 
@@ -68,7 +68,7 @@ Respuesta:
 **H-04 · Cómo le gusta presentar el precio**: ¿solo el total?, ¿material y mano de obra por separado?
 Respuesta:
 
-## Para validar con el herrero
+## Para validar con el herrero (Hugo)
 
 Supuestos del oficio que el agente tomó al especificar plantillas. Cada uno con el valor usado.
 

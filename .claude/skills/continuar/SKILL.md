@@ -44,9 +44,10 @@ En los dos casos:
 2. Marca la casilla en `docs/PLAN.md`.
 3. Agrega una entrada a `docs/PROGRESO.md` con el formato que está al inicio de ese archivo.
 4. Haz commit de esos dos archivos junto con la tarea o inmediatamente después.
+5. `git push origin main`. Si falla por red, anótalo en el progreso y sigue; se sube con el siguiente commit.
 
 ## 5. Sigue
 
-Vuelve al paso 2 sin preguntar. Si se terminó la fase, sigue el procedimiento `cierre-de-fase` y continúa con la siguiente.
+Vuelve al paso 2 sin preguntar. Si se terminó la fase, sigue el procedimiento `cierre-de-fase` y detente: Lino revisa la fase antes de empezar la siguiente.
 
 Detente solo en los casos de "Cuándo detenerte". Al detenerte, deja un resumen breve: qué quedó hecho, qué sigue y qué necesitas de Lino.
