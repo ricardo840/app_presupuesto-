@@ -116,3 +116,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 265 pruebas en verde. Una plantilla de prueba da cada error genérico desde su esquema (`parametro_faltante`, `valor_invalido`, `fuera_de_rango`, `articulo_desconocido`, `familia_no_permitida`, código propio de opción) y el registro devuelve plantillas por id o `plantilla_desconocida`. Oráculo `ok`.
 - Decisiones: D-025 (tipos `texto` y `lista`, orden de la validación, códigos `valor_invalido` y `plantilla_desconocida`, advertencias dentro del modelo).
 - Sigue: F1-T7.
+
+## 2026-11-19 · F1-T7 · Plantilla `libre`
+
+- Hecho: `lib/motor/plantillas/libre.dart` (`PlantillaLibre`): esquema con listas de piezas, paneles y herrajes, defectos de grupo y corte, y generación del modelo sin posiciones. Lo programó el implementador; el director revisó el código.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 274 pruebas en verde; `dorados/libre_barandal_7500.json` coincide de punta a punta (modelo y medición), con su advertencia de empalme; oráculo `ok`.
+- Decisiones: rangos del esquema, que la especificación no fijaba (medidas de 1 a 50 000 mm, cantidad de 1 a 10 000, uniones de 0 a 100 000), anotados en `docs/MOTOR_MEDICION.md` §4.3.
+- Sigue: F1-T8.

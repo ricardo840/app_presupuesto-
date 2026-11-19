@@ -72,7 +72,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   El director fija la interfaz `Plantilla` y `ParametroDef`. §4.
   *Hecho cuando:* una plantilla de prueba valida cada error genérico (`parametro_faltante`, `fuera_de_rango`, `articulo_desconocido`, `familia_no_permitida`) desde su esquema; el registro devuelve plantillas por id.
 
-- [ ] **F1-T7 · Plantilla `libre`** · I
+- [x] **F1-T7 · Plantilla `libre`** · I
   §4.3.
   *Hecho cuando:* `dorados/libre_barandal_7500.json` coincide de punta a punta (modelo y medición), con su advertencia de empalme.
 

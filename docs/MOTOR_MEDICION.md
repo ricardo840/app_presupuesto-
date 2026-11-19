@@ -229,6 +229,8 @@ Para cualquier diseño que no quepa en una plantilla. El usuario (o la IA) da la
 
 Las piezas conservan su `cantidad` y no tienen posición. Sus ids son `pieza-1`, `pieza-2`… y los de los paneles `panel-1`, `panel-2`…, en el orden capturado. Si falta `grupo` se usa `piezas` o `paneles`; si falta `corte`, `recto`. `uniones: { manual: n }`. Sin extras. `caja = ancho × alto`.
 
+Esquema: `ancho`, `alto`, y en cada elemento `largo`, `ancho` y `alto`, son longitudes requeridas de 1 a 50 000 mm, sin defecto; `cantidad` es un entero de 1 a 10 000; `uniones`, un entero de 0 a 100 000 con defecto 0; `grupo` es texto; `corte` es `recto` o `inglete`. El artículo de una pieza debe ser perfil; el de un panel, lámina; el de un herraje, herraje. Las tres listas tienen como defecto la lista vacía.
+
 ## 5. Optimizador de cortes
 
 Decide cuántos tramos comprar de cada perfil y cómo cortarlos. Método: primer ajuste decreciente.
