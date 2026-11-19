@@ -36,7 +36,7 @@ Dejar un proyecto de Flutter que compila, con análisis estricto y las pruebas d
   `flutter create --project-name linforge --org mx.lino --platforms android .` Agrega `windows` si está listo para desarrollo. Lee `docs/ARQUITECTURA.md` §7 y §10. Sustituye la app de ejemplo por una pantalla mínima con el nombre de la app y borra la prueba de ejemplo.
   *Hecho cuando:* los archivos del kit siguen intactos (`git diff` solo muestra archivos nuevos); `flutter analyze` limpio; `flutter test` corre; `flutter build apk --debug` compila, o se anotó qué falta.
 
-- [ ] **F0-T3 · Análisis, estructura y soporte de pruebas** · D
+- [x] **F0-T3 · Análisis, estructura y soporte de pruebas** · D
   `analysis_options.yaml` estricto (`strict-casts`, `strict-inference`, `strict-raw-types`, sin `print`, tipos de retorno declarados). `test/arquitectura_test.dart` con las reglas de `docs/ARQUITECTURA.md` §2. `test/soporte/` con el cargador de `test/fixtures/` y los comparadores con tolerancia.
   *Hecho cuando:* una prueba demuestra que el verificador de arquitectura rechaza un `import` prohibido; el cargador lee los 9 dorados; `/verify` en verde.
 

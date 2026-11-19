@@ -40,3 +40,10 @@ Solo se incluyen los renglones que tengan algo que decir. Al cerrar una fase se 
 - Verificación: `git status` solo mostró archivos nuevos (el kit quedó intacto); `dart format` sin cambios; `flutter analyze` limpio; `flutter test` 1 prueba en verde; `flutter build apk --debug` compila (`app-debug.apk`, unos 3.5 min). Todavía no existe el procedimiento `verify` completo: llega con F0-T3.
 - Decisiones: D-022, `cupertino_ui` 1.1.7 en lugar de `package:flutter/cupertino.dart`, y solo Android como plataforma.
 - Sigue: F0-T3.
+
+## 2026-11-19 · F0-T3 · Análisis, estructura y soporte de pruebas
+
+- Hecho: `analysis_options.yaml` estricto (`strict-casts`, `strict-inference`, `strict-raw-types`, sin `print`, tipos de retorno declarados y otras reglas). `test/soporte/arquitectura.dart` revisa las capas de `docs/ARQUITECTURA.md` §2 y lo usa `test/arquitectura_test.dart`. `test/soporte/fixtures.dart` carga entradas y dorados. `test/soporte/comparadores.dart` compara JSON con las tolerancias de las reglas de pruebas: enteros exactos, decimales con 1e-5 y la ruta de la primera diferencia.
+- Verificación: formato sin cambios; `flutter analyze` limpio; `flutter test` 22 pruebas en verde. Las pruebas demuestran que el verificador rechaza importaciones prohibidas (motor→datos, relativas entre capas, Flutter, `dart:io` y `dart:ui` en el motor, reloj y azar) y que el cargador lee los 9 dorados. Un archivo temporal con `print`, sin tipo de retorno y con `List` sin tipo dio 6 avisos del análisis; se borró.
+- Decisiones: D-023, `main.dart` y `app/` pueden importar cualquier capa.
+- Sigue: F0-T4 (al implementador).
